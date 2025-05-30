@@ -10,7 +10,7 @@ export default function Home() {
   return (
     <div className="flex flex-col items-center justify-between h-screen py-10 md:py-20">
       <SmoothCursor />
-      <div>
+      <div className="pb-20">
         <BlurFade>
           <HeroSection />
           <CurrentProjects />

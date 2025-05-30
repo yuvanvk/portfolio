@@ -11,7 +11,7 @@ export const CurrentProjects = () => {
     }, {
       id: 2,
       title: "nuvessi",
-      description: "is a minimal web development studio focused on building clean, fast, and modern websites.That help brands launch online with clarity, style, and zero fluff.",
+      description: "is a minimal web development studio focused on building clean, fast, and modern websites. That help brands launch online with clarity, style, and zero fluff.",
       href: "https://github.com/YuvanX/nuvessi"
     }
   ];
