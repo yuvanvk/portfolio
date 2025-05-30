@@ -1,8 +1,9 @@
 import { BlurFade } from "@/components/magicui/blur-fade";
-import { CurrentProjects } from "@/components/ui/current-projects";
-import { HeroSection } from "@/components/ui/hero-section";
-import { NavBar } from "@/components/ui/navbar";
-import { Projects } from "@/components/ui/projects";
+import { CurrentProjects } from "@/components/porfolio/current-projects";
+import { HeroSection } from "@/components/porfolio/hero-section";
+import { NavBar } from "@/components/porfolio/navbar";
+import { Projects } from "@/components/porfolio/projects";
+
 import { SmoothCursor } from "@/components/ui/smooth-cursor";
 
 export default function Home() {

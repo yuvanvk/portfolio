@@ -14,14 +14,17 @@ const geistMono = Geist_Mono({
 });
 
 const robotoMono = Roboto_Mono({
-  subsets: ['latin'],
-  weight: ['400', '500', '700'], // Choose weights you need
-  variable: '--font-roboto-mono', // Optional: for CSS variable
-})
+  subsets: ["latin"],
+  weight: ["400", "500", "700"], // Choose weights you need
+  variable: "--font-roboto-mono", // Optional: for CSS variable
+});
 
 export const metadata: Metadata = {
   title: "Abhi Vignesh",
   description: "Abhi Vignesh Portfolio",
+  icons: {
+    icon: "/av.png",
+  },
 };
 
 export default function RootLayout({
@@ -35,12 +38,12 @@ export default function RootLayout({
         className={`${robotoMono.variable} ${robotoMono.variable} antialiased`}
       >
         <ThemeProvider
-            attribute="class"
-            defaultTheme="system"
-            enableSystem
-            disableTransitionOnChange
-          >
-        {children}
+          attribute="class"
+          defaultTheme="system"
+          enableSystem
+          disableTransitionOnChange
+        >
+          {children}
         </ThemeProvider>
       </body>
     </html>
