@@ -1,7 +1,9 @@
 "use client";
 import { useTheme } from "next-themes";
 import { useEffect, useState } from "react";
-import { RiMoonFill, RiSunFill } from "react-icons/ri";
+import { MoonIcon } from "./moon";
+import { SunIcon } from "./sun";
+import { PlayAudio } from "./audio";
 
 export const ModeToggle = () => {
   const { theme, setTheme } = useTheme();
@@ -14,8 +16,11 @@ export const ModeToggle = () => {
   if (!mounted) return null;
 
   return (
-    <div onClick={() => setTheme(theme === "light" ? "dark" : "light")}>
-      {theme === "light" ? <RiMoonFill /> : <RiSunFill />}
+    <div onClick={() => {
+      PlayAudio()
+      setTheme(theme === "light" ? "dark" : "light")
+      }}>
+      {theme === "light" ? <MoonIcon size={18}  /> : <SunIcon size={18}/>}
     </div>
   );
 };

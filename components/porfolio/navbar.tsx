@@ -57,17 +57,17 @@ const DATA = {
     social: {
       GitHub: {
         name: "GitHub",
-        url: "#",
+        url: "https://github.com/YuvanX",
         icon: Icons.github,
       },
       LinkedIn: {
         name: "LinkedIn",
-        url: "#",
+        url: "https://www.linkedin.com/in/abhivignesh/",
         icon: Icons.linkedin,
       },
       X: {
         name: "X",
-        url: "#",
+        url: "https://x.com/AbhiVignesh_",
         icon: Icons.x,
       },
       email: {
@@ -83,7 +83,7 @@ export function NavBar() {
   return (
     
       <TooltipProvider>
-        <Dock   direction="middle" className="rounded-full w-xl fixed bottom-10">
+        <Dock   direction="middle" className="rounded-full w-full md:w-xl fixed bottom-10">
           {DATA.navbar.map((item) => (
             <DockIcon key={item.label}>
               <Tooltip>
