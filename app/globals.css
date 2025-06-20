@@ -169,15 +169,21 @@
   font-display: swap;
 }
 
-body::-webkit-scrollbar {
-  display: none;
-}
 
 @layer base {
   * {
     @apply border-border outline-ring/50;
   }
+  html,
   body {
-    @apply bg-background text-foreground;
+    @apply bg-background text-foreground overflow-auto;
+
+    -ms-overflow-style: none;     
+    scrollbar-width: none;        
+  }
+
+  html::-webkit-scrollbar,
+  body::-webkit-scrollbar {
+    display: none;                
   }
 }
