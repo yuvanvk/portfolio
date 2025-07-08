@@ -3,6 +3,7 @@ import { CurrentProjects } from "@/components/porfolio/current-projects";
 import { HeroSection } from "@/components/porfolio/hero-section";
 import { NavBar } from "@/components/porfolio/navbar";
 import { Projects } from "@/components/porfolio/projects";
+import { Skills } from "@/components/porfolio/skills";
 
 import { SmoothCursor } from "@/components/ui/smooth-cursor";
 
@@ -13,6 +14,7 @@ export default function Home() {
       <div className="pb-10">
         <BlurFade>
           <HeroSection />
+          <Skills />
           <CurrentProjects />
           <Projects />
         </BlurFade>
