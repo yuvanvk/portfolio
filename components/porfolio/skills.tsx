@@ -18,7 +18,7 @@ export const Skills = () => {
     "docker",
   ];
   return (
-    <Card className="font-satoshi max-w-2xl bg-transparent border-none">
+    <Card className="font-satoshi max-w-2xl bg-transparent border-none shadow-none">
       <CardHeader>
         <CardTitle className="text-center text-sm font-bold">skills</CardTitle>
       </CardHeader>
