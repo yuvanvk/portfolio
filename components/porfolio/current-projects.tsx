@@ -10,9 +10,9 @@ export const CurrentProjects = () => {
       href: "https://github.com/YuvanX/strato-ai"
     }, {
       id: 2,
-      title: "nuvessi",
+      title: "slavan",
       description: "is a minimal web development studio focused on building clean, fast, and modern websites. That help brands launch online with clarity, style, and zero fluff.",
-      href: "https://github.com/YuvanX/nuvessi"
+      href: "https://slavan.vercel.app/"
     }
   ];
 
