@@ -24,7 +24,7 @@ export const Skills = () => {
       </CardHeader>
       <CardContent className="flex gap-3 justify-center text-xs flex-wrap">
         {SKILLS.map((s, idx) => (
-          <div className="px-4 py-2 border rounded-lg hover:bg-neutral-900 transition duration-300">{s}</div>
+          <div key={idx} className="px-4 py-2 border rounded-lg hover:bg-neutral-900 transition duration-300">{s}</div>
         ))}
       </CardContent>
     </Card>
