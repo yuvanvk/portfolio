@@ -8,11 +8,6 @@ export const CurrentProjects = () => {
       title: "Strato",
       description: `an app that builds fully functional websites from a single prompt. Just describe your idea, and Strato turns it into a live website instantly.`,
       href: "https://github.com/YuvanX/strato-ai"
-    }, {
-      id: 2,
-      title: "slavan",
-      description: "is a minimal web development studio focused on building clean, fast, and modern websites. That help brands launch online with clarity, style, and zero fluff.",
-      href: "https://slavan.vercel.app/"
     }
   ];
 

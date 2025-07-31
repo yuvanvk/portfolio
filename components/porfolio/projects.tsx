@@ -26,13 +26,19 @@ export const Projects = () => {
     },
     {
       id: 4,
+      title: "nuvessi",
+      description: "is a minimal web development studio focused on building clean, fast, and modern websites. That help brands launch online with clarity, style, and zero fluff.",
+      href: "https://nuvessi.vercel.app/"
+    },
+    {
+      id: 5,
       title: "thoughts",
       description:
         "a blogging platform where users can read blogs, write their own, and become writers to publish blogs that others can read. It provides a simple, clean interface to express ideas and share thoughts with the world.",
       href: "https://thoughts-red-omega.vercel.app/home",
     },
     {
-      id: 5,
+      id: 6,
       title: "dukaan",
       description:
         "A clean and responsive UI clone of the Dukaan website, recreated with attention to layout, design, and user experience.",
