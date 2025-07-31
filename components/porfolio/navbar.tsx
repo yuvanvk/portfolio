@@ -3,7 +3,8 @@
 import { CalendarIcon, HomeIcon, MailIcon } from "lucide-react";
 import Link from "next/link";
 import React from "react";
-
+import { RiFilePaper2Fill } from "react-icons/ri";
+import { SiLeetcode } from "react-icons/si";
 import { ModeToggle } from "../ui/mode-toggle";
 import { buttonVariants } from "@/components/ui/button";
 import { Separator } from "@/components/ui/separator";
@@ -51,7 +52,7 @@ const Icons = {
 
 const DATA = {
   navbar: [
-    { href: "#", icon: HomeIcon, label: "Home" },
+    { href: "https://drive.google.com/file/d/1WedKtNkm5Hks_60vrsEjAuDcU27HwsXv/view?usp=sharing", icon: RiFilePaper2Fill, label: "Home" },
   ],
   contact: {
     social: {
@@ -72,8 +73,8 @@ const DATA = {
       },
       email: {
         name: "Send Email",
-        url: "#",
-        icon: Icons.email,
+        url: "https://leetcode.com/u/abhivigneshh/",
+        icon: SiLeetcode,
       },
     },
   },
