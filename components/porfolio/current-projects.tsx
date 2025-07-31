@@ -5,9 +5,14 @@ export const CurrentProjects = () => {
   const DATA = [
     {
       id: 1,
-      title: "Strato",
-      description: `an app that builds fully functional websites from a single prompt. Just describe your idea, and Strato turns it into a live website instantly.`,
-      href: "https://github.com/YuvanX/strato-ai"
+      title: "nexttoyou",
+      description: `A location-based app that helps users effortlessly discover nearby hostels and PG accommodations—saving them valuable time and reducing the hassle of manual searches.`,
+      href: "https://github.com/YuvanX/nexttoyou"
+    },{
+      id: 2,
+      title: "upvote",
+      description: `A community-driven platform where users can upvote real-world problems, issues, and innovative ideas—empowering others to identify key pain points and collaborate on impactful solutions.`,
+      href: "#"
     }
   ];
 
