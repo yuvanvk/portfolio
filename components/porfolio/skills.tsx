@@ -70,7 +70,7 @@ export const Skills = () => {
       <CardHeader>
         <CardTitle className="text-sm font-bold">skills</CardTitle>
       </CardHeader>
-      <CardContent className="grid grid-cols-6 gap-1.5 justify-center text-xs">
+      <CardContent className="grid grid-cols-3 md:grid-cols-6 gap-1.5 justify-center text-xs">
         {skills.map((s, idx) => (
           <div key={idx} className="px-4 py-2 border rounded-lg hover:text-white dark:bg-neutral-900 hover:bg-neutral-800 transition duration-300 flex items-center gap-2  font-medium ">
             <s.icon />
