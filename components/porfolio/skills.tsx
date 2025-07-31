@@ -18,6 +18,7 @@ export const Skills = () => {
     "docker",
     "git"
   ];
+  
   return (
     <Card className="font-satoshi max-w-2xl bg-transparent border-none shadow-none">
       <CardHeader>

@@ -1,12 +1,25 @@
+import { Avatar, AvatarFallback, AvatarImage } from "../ui/avatar";
 import { TextHighLighter } from "../ui/text-highlighter";
 
 export const HeroSection = () => {
   return (
-    <div className="text-center font-satoshi font-light">
-      <div className="max-w-3xl text-3xl">
-        i&apos;m <span className="font-satoshi font-bold">abhi,</span> i code.
+    <div className=" font-satoshi font-light">
+      <div className="max-w-3xl flex gap-8 items-center">
+        <Avatar className="w-28 h-28">
+          <AvatarImage  src="/yuvanlogo.jpeg" alt="@abhi"/>
+          <AvatarFallback>abhi</AvatarFallback>
+        </Avatar>
+
+        <div>
+          <div className="text-4xl font-bold font-satoshi">Abhi Vignesh</div>
+          <div className="text-sm">@abhiiscool</div>
+
+          <div className="my-3">
+            <div className="text-white font-medium text-sm">20 &middot; Full Stack Engineer</div>
+          </div>
+        </div>
       </div>
-      <div className="text-sm my-5">20 year old, <TextHighLighter text="building full stack apps"/>, learning new stuff</div>
+      
     </div>
   );
 };
