@@ -1,5 +1,4 @@
 import { Avatar, AvatarFallback, AvatarImage } from "../ui/avatar";
-import { TextHighLighter } from "../ui/text-highlighter";
 
 export const HeroSection = () => {
   return (

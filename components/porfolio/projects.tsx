@@ -42,7 +42,7 @@ export const Projects = () => {
 
   return (
     <Card className="bg-transparent border-none shadow-none max-w-2xl">
-      <CardTitle className="text-sm text-center font-satoshi font-bold">
+      <CardTitle className="text-sm  font-satoshi font-bold">
         projects
       </CardTitle>
       <CardContent>
