@@ -11,11 +11,11 @@ export const HeroSection = () => {
         </Avatar>
 
         <div>
-          <div className="text-4xl font-bold font-satoshi">Abhi Vignesh</div>
+          <div className="text-4xl font-bold font-satoshi lowercase">AbhiVignesh</div>
           <div className="text-sm">@abhiiscool</div>
 
-          <div className="my-3">
-            <div className="text-white font-medium text-sm">20 &middot; Full Stack Engineer</div>
+          <div className="my-3 lowercase">
+            <div className="dark:text-white font-medium text-sm">20 &middot; Full Stack Engineer</div>
           </div>
         </div>
       </div>
