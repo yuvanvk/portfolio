@@ -1,6 +1,6 @@
 "use client";
 
-import { CalendarIcon, HomeIcon, MailIcon } from "lucide-react";
+import { CalendarIcon, MailIcon } from "lucide-react";
 import Link from "next/link";
 import React from "react";
 import { RiFilePaper2Fill } from "react-icons/ri";
