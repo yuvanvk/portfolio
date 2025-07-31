@@ -68,7 +68,7 @@ const DATA = {
       },
       X: {
         name: "X",
-        url: "https://x.com/AbhiVignesh_",
+        url: "https://x.com/abhiiscooll",
         icon: Icons.x,
       },
       email: {
