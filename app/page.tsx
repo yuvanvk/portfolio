@@ -14,9 +14,9 @@ export default function Home() {
       <div className="pb-10">
         <BlurFade>
           <HeroSection />
-          <Skills />
           <CurrentProjects />
           <Projects />
+          <Skills />
         </BlurFade>
       </div>
       <NavBar />
