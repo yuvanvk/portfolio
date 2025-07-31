@@ -18,7 +18,7 @@ export const CurrentProjects = () => {
 
   return (
     <Card className="bg-transparent border-none shadow-none max-w-2xl">
-      <CardTitle className="text-sm text-center font-satoshi font-bold">ongoing projects</CardTitle>
+      <CardTitle className="text-sm font-satoshi font-bold">ongoing projects</CardTitle>
       <CardContent>
         {DATA &&
           DATA.map((project) => (
