@@ -58,7 +58,7 @@ const DATA = {
     social: {
       GitHub: {
         name: "GitHub",
-        url: "https://github.com/YuvanX",
+        url: "https://github.com/yuvanvk",
         icon: Icons.github,
       },
       LinkedIn: {
