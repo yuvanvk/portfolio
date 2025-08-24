@@ -5,7 +5,7 @@ export const HeroSection = () => {
     <div className=" font-satoshi font-light px-3">
       <div className="max-w-3xl flex gap-8 items-center">
         <Avatar className="w-28 h-28">
-          <AvatarImage  src="/yuvanlogo.jpeg" alt="@abhi"/>
+          <AvatarImage  src="/ben.jpeg" alt="@abhi"/>
           <AvatarFallback>abhi</AvatarFallback>
         </Avatar>
 
