@@ -3,7 +3,7 @@
 import { useState } from "react";
 import { BiChevronLeft, BiChevronRight } from "react-icons/bi";
 
-import * as m from "motion/react";
+import { motion as m } from "motion/react";
 import { useTheme } from "next-themes";
 
 import { Moon } from "@/components/ui/moon";
@@ -17,13 +17,13 @@ export const Navbar = () => {
     <>
       <div className=" flex items-center justify-between">
         <div className="flex items-center gap-2">
-          <div
+          <m.div
             className={`${
               isOpen ? "w-16 justify-between" : "w-5 justify-center"
             } h-5 rounded-full flex items-center  bg-[#EFEFF1] dark:bg-zinc-800 cursor-pointer px-1`}
           >
             {isOpen && (
-              <div>
+              <m.div initial={{x: 10}} animate={{x: 0}} transition={{ duration: 0.3}}>
                 {theme === "light" ? (
                   <div onClick={() => setTheme("dark")}>
                     <Moon />
@@ -33,15 +33,15 @@ export const Navbar = () => {
                     <Sun />
                   </div>
                 )}
-              </div>
+              </m.div>
             )}
-            <div onClick={() => setOpen((c) => !c)}>
+            <m.div whileTap={{ rotate: 360 }}  transition={{ ease: 'easeOut', duration: 0.5 }} onClick={() => setOpen((c) => !c)}>
               {isOpen && <BiChevronRight />}
               {!isOpen && <BiChevronLeft />}
-            </div>
-          </div>
+            </m.div>
+          </m.div>
 
-          <span className="text-lg font-sans">abhi vignesh</span>
+          <span className="text-lg font-medium font-sans">abhi vignesh</span>
         </div>
 
         <div className="flex items-center font-sans">SF</div>
