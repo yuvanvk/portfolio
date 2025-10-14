@@ -9,12 +9,13 @@ import { SmoothCursor } from "@/components/ui/smooth-cursor";
 
 export default function Home() {
   return (
-    <div className=" py-10 md:py-20 max-w-4xl  mx-auto">
+    <div className=" py-10 md:py-20 md:max-w-lg xl:max-w-4xl  mx-auto">
       <Navbar />
       {/* <SmoothCursor /> */}
       <div className="pb-10">
+        <HeroSection />
         {/* <BlurFade>
-          <HeroSection />
+          
           <CurrentProjects />
           <Projects />
           <Skills />
