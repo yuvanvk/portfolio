@@ -1,6 +1,6 @@
 import type { Metadata } from "next";
 import {  Space_Grotesk } from "next/font/google";
-
+import { Geist_Mono } from "next/font/google";
 import { ThemeProvider } from "@/components/ui/theme-provider";
 import { Analytics } from "@vercel/analytics/next"
 //@ts-ignore
@@ -10,6 +10,12 @@ const spaceGrotesk = Space_Grotesk({
   subsets: ["latin"],
   weight: ["300", "400", "500", "700"],
   variable: "--font-space-grotesk", 
+});
+
+const geistMono = Geist_Mono({
+  subsets: ["latin"],
+  weight: ["300", "400", "500", "700"],
+  variable: "--font-geist-mono", 
 });
 
 export const metadata: Metadata = {
@@ -28,7 +34,7 @@ export default function RootLayout({
   return (
     <html lang="en" suppressHydrationWarning>
       <body
-        className={`${spaceGrotesk.variable} ${spaceGrotesk.variable} antialiased`}
+        className={`${spaceGrotesk.variable} ${geistMono.variable} antialiased`}
       >
         <ThemeProvider
           attribute="class"
