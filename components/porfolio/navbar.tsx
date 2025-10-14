@@ -20,7 +20,7 @@ export const Navbar = () => {
           <m.div
             className={`${
               isOpen ? "w-16 justify-between" : "w-5 justify-center"
-            } h-5 rounded-full flex items-center  bg-[#EFEFF1] dark:bg-zinc-800 cursor-pointer px-1`}
+            } h-5 rounded-full flex items-center  bg-[#EFEFF1] dark:bg-zinc-800 cursor-pointer px-1 transition-all duration-300`}
           >
             {isOpen && (
               <m.div initial={{x: 10}} animate={{x: 0}} transition={{ duration: 0.3}}>
