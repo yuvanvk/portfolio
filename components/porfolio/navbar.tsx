@@ -2,11 +2,12 @@
 
 import { useState } from "react";
 import { BiChevronLeft, BiChevronRight } from "react-icons/bi";
-import { Sun } from "@/components/ui/sun";
 
 import * as m from "motion/react";
 import { useTheme } from "next-themes";
-import { MoonIcon } from "../ui/moon";
+
+import { Moon } from "@/components/ui/moon";
+import { Sun } from "@/components/ui/sun";
 
 export const Navbar = () => {
   const [isOpen, setOpen] = useState(false);
@@ -19,13 +20,13 @@ export const Navbar = () => {
           <div
             className={`${
               isOpen ? "w-16 justify-between" : "w-5 justify-center"
-            } h-5 rounded-full flex items-center  bg-zinc-800 cursor-pointer px-1`}
+            } h-5 rounded-full flex items-center  bg-[#EFEFF1] dark:bg-zinc-800 cursor-pointer px-1`}
           >
             {isOpen && (
               <div>
                 {theme === "light" ? (
                   <div onClick={() => setTheme("dark")}>
-                    <MoonIcon />
+                    <Moon />
                   </div>
                 ) : (
                   <div onClick={() => setTheme("light")}>
