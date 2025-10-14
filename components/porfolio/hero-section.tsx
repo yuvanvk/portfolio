@@ -3,7 +3,7 @@ import { Avatar, AvatarFallback, AvatarImage } from "../ui/avatar";
 export const HeroSection = () => {
   return (
     <div className=" font-satoshi font-light px-3">
-      <div className="max-w-3xl flex gap-8 items-center">
+      <div className="max-w-7xl flex gap-8 items-center">
         <Avatar className="w-28 h-28">
           <AvatarImage  src="/ben.jpeg" alt="@abhi"/>
           <AvatarFallback>abhi</AvatarFallback>

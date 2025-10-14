@@ -1,13 +1,15 @@
 import type { Metadata } from "next";
-import {  Roboto_Mono } from "next/font/google";
-import "./globals.css";
+import {  Space_Grotesk } from "next/font/google";
+
 import { ThemeProvider } from "@/components/ui/theme-provider";
 import { Analytics } from "@vercel/analytics/next"
+//@ts-ignore
+import "./globals.css";
 
-const robotoMono = Roboto_Mono({
+const spaceGrotesk = Space_Grotesk({
   subsets: ["latin"],
-  weight: ["400", "500", "700"], // Choose weights you need
-  variable: "--font-roboto-mono", // Optional: for CSS variable
+  weight: ["300", "400", "500", "700"],
+  variable: "--font-space-grotesk", 
 });
 
 export const metadata: Metadata = {
@@ -26,7 +28,7 @@ export default function RootLayout({
   return (
     <html lang="en" suppressHydrationWarning>
       <body
-        className={`${robotoMono.variable} ${robotoMono.variable} antialiased`}
+        className={`${spaceGrotesk.variable} ${spaceGrotesk.variable} antialiased`}
       >
         <ThemeProvider
           attribute="class"
