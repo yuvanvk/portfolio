@@ -44,7 +44,7 @@ export const Navbar = () => {
           <span className="text-lg font-medium font-sans">abhi vignesh</span>
         </div>
 
-        <div className="flex items-center font-sans">SF</div>
+        <div className="flex items-center font-sans">IN</div>
       </div>
       <hr />
     </>
