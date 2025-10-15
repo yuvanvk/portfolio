@@ -12,7 +12,7 @@ export const Crafts = () => {
       <div className="flex flex-col gap-y-5">
         {CRAFTSINFO.map((c => (
           <motion.div whileHover={{ scale: 1.02}} transition={{ duration: 0.3 }} key={c.imageUrl} className="cursor-pointer">
-            <Thumbnail link={c.link} imageUrl={c.imageUrl}/>
+            <Thumbnail redirectLink={c.redirectLink} link={c.link} imageUrl={c.imageUrl}/>
           </motion.div>
         )))}
       </div>  
