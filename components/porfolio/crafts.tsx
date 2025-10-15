@@ -1,16 +1,19 @@
+"use client";
+
 import { CRAFTSINFO } from "@/lib/crafts";
 import { Thumbnail } from "./thumbnail";
+import { motion } from "motion/react";
 
 export const Crafts = () => {
 
   return (
     <div>
       <div className="px-2 font-mono text-neutral-800 dark:text-neutral-300 pb-4">Crafts</div>
-      <div className="flex flex-col space-y-2">
+      <div className="flex flex-col gap-y-5">
         {CRAFTSINFO.map((c => (
-          <div key={c.imageUrl}>
+          <motion.div whileHover={{ scale: 1.02}} transition={{ duration: 0.3 }} key={c.imageUrl} className="cursor-pointer">
             <Thumbnail link={c.link} imageUrl={c.imageUrl}/>
-          </div>
+          </motion.div>
         )))}
       </div>  
     </div>
