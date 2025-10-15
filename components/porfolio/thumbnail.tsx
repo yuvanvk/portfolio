@@ -1,10 +1,8 @@
 "use client";
 
-import { useRouter } from "next/navigation";
 
 export const Thumbnail = ({ imageUrl, link, redirectLink }: { imageUrl: string, link: string, redirectLink: string }) => {
-    const router = useRouter();
-
+    
 
   const handleOpenNewTab = () => {
     window.open(redirectLink, '_blank', 'noopener,noreferrer');
