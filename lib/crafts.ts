@@ -13,5 +13,10 @@ export const CRAFTSINFO = [
         imageUrl: "/gojo.png",
         link: "gojo.com",
         redirectLink: "https://unfold-clone.vercel.app/"
+    },
+    {
+        imageUrl: "/nexus.png",
+        link: "nexus.com",
+        redirectLink: "https://nexus-two-sooty.vercel.app/"
     }
 ]
