@@ -1,11 +1,11 @@
 export const CRAFTSINFO = [
     {
-        imageUrl: "/MARS.png",
+        imageUrl: "/mars.png",
         link: "mars.com",
         redirectLink: "https://mars-omega-ten.vercel.app/"
     },
     {
-        imageUrl: "/AI_LANDING_PAGE.png",
+        imageUrl: "/ai.png",
         link: "ui.com",
         redirectLink: "https://u1ai.vercel.app/"
     },
