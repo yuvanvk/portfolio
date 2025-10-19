@@ -1,22 +1,33 @@
-export const CRAFTSINFO = [
+export type POWCardType = {
+    title: string,
+    description: string,
+    deploy: string,
+    github: string,
+}
+
+export const POW: POWCardType[] = [
     {
-        imageUrl: "/mars.png",
-        link: "mars.com",
-        redirectLink: "https://mars-omega-ten.vercel.app/"
+        title: "Mars",
+        description: "A cool youtube clone built for understanding how to use API's.",
+        deploy: "https://mars-omega-ten.vercel.app/",
+        github: "https://github.com/yuvanvk/youtube-clone"
     },
     {
-        imageUrl: "/ai.png",
-        link: "ui.com",
-        redirectLink: "https://u1ai.vercel.app/"
+        title: "AISEO",
+        description: "Built an AI landing page, practicing animations.",
+        deploy: "https://u1ai.vercel.app/",
+        github: "https://github.com/yuvanvk/ai-landing"
     },
     {
-        imageUrl: "/gojo.png",
-        link: "gojo.com",
-        redirectLink: "https://unfold-clone.vercel.app/"
+        title: "Gojo",
+        description: "Built an unfold landing clone, to improve my animation skills",
+        deploy: "https://unfold-clone.vercel.app/",
+        github: "https://github.com/yuvanvk/unfold-clone"
     },
     {
-        imageUrl: "/nexus.png",
-        link: "nexus.com",
-        redirectLink: "https://nexus-two-sooty.vercel.app/"
+        title: "Nexus",
+        description: "Built an Notion like app.",
+        deploy: "https://nexus-two-sooty.vercel.app/",
+        github: "https://github.com/yuvanvk/nexus"
     }
 ]
