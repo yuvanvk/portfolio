@@ -64,7 +64,7 @@ export const POWCard = () => {
           <m.div className="flex gap-2 items-center">
             <m.div
               layoutId="title"
-              className="w-28 h-16 bg-[#EFEFF1] dark:bg-neutral-800 flex items-center justify-center px-2 rounded-lg font-medium uppercase"
+              className="min-w-28 min-h-16 bg-[#EFEFF1] dark:bg-neutral-800 flex items-center justify-center  rounded-lg font-medium uppercase"
             >
               {p.title}
             </m.div>

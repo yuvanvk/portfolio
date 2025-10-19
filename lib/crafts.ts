@@ -15,6 +15,27 @@ export const POW: POWCardType[] = [
         tech: ["React", "Typescript", "Tailwind CSS"]
     },
     {
+        title: "Nexus",
+        description: "Built an Notion like app.",
+        deploy: "https://nexus-two-sooty.vercel.app/",
+        github: "https://github.com/yuvanvk/nexus",
+         tech: ["Nextjs", "Typescript", "Tailwind CSS", "Drizzle ORM", "Postgres"]
+    },
+    {
+        title: "Strato",
+        description: "Building an All-in-one AI chat app.",
+        deploy: "https://nexus-two-sooty.vercel.app/",
+        github: "https://github.com/yuvanvk/nexus",
+         tech: ["Nextjs", "Typescript", "Tailwind CSS", "Prisma ORM", "Postgres"]
+    },
+    {
+        title: "Thoughts",
+        description: "Building a Blogging platform.",
+        deploy: "https://nexus-two-sooty.vercel.app/",
+        github: "https://github.com/yuvanvk/nexus",
+         tech: ["Nextjs", "Typescript", "Tailwind CSS", "Prisma", "Postgres", "Turborepo", "trpc"]
+    },
+    {
         title: "AISEO",
         description: "Built an AI landing page, practicing animations.",
         deploy: "https://u1ai.vercel.app/",
@@ -28,25 +49,4 @@ export const POW: POWCardType[] = [
         github: "https://github.com/yuvanvk/unfold-clone",
          tech: ["Nextjs", "Typescript", "Tailwind CSS", "Motion"]
     },
-    {
-        title: "Nexus",
-        description: "Built an Notion like app.",
-        deploy: "https://nexus-two-sooty.vercel.app/",
-        github: "https://github.com/yuvanvk/nexus",
-         tech: ["Nextjs", "Typescript", "Tailwind CSS", "Drizzle ORM", "Postgres"]
-    },
-    {
-        title: "Strato AI",
-        description: "Building an All-in-one AI chat app.",
-        deploy: "https://nexus-two-sooty.vercel.app/",
-        github: "https://github.com/yuvanvk/nexus",
-         tech: ["Nextjs", "Typescript", "Tailwind CSS", "Prisma ORM", "Postgres"]
-    },
-    {
-        title: "Thoughts",
-        description: "Building a Blogging platform.",
-        deploy: "https://nexus-two-sooty.vercel.app/",
-        github: "https://github.com/yuvanvk/nexus",
-         tech: ["Nextjs", "Typescript", "Tailwind CSS", "Prisma", "Postgres", "Turborepo", "trpc"]
-    }
 ]
