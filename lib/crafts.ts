@@ -34,5 +34,19 @@ export const POW: POWCardType[] = [
         deploy: "https://nexus-two-sooty.vercel.app/",
         github: "https://github.com/yuvanvk/nexus",
          tech: ["Nextjs", "Typescript", "Tailwind CSS", "Drizzle ORM", "Postgres"]
+    },
+    {
+        title: "Strato AI",
+        description: "Building an All-in-one AI chat app.",
+        deploy: "https://nexus-two-sooty.vercel.app/",
+        github: "https://github.com/yuvanvk/nexus",
+         tech: ["Nextjs", "Typescript", "Tailwind CSS", "Prisma ORM", "Postgres"]
+    },
+    {
+        title: "Thoughts",
+        description: "Building a Blogging platform.",
+        deploy: "https://nexus-two-sooty.vercel.app/",
+        github: "https://github.com/yuvanvk/nexus",
+         tech: ["Nextjs", "Typescript", "Tailwind CSS", "Prisma", "Postgres", "Turborepo", "trpc"]
     }
 ]
