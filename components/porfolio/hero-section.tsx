@@ -8,7 +8,7 @@ export const HeroSection = () => (
     </p>
 
     <p className="font-mono">
-      You can find me on <a target="_blank" href="https://x.com/yuvanvk" className="underline underline-offset-4 decoration-purple-500 cursor-pointer">𝕏</a>
+      You can find me on <a target="_blank" href="https://x.com/yuvanvk" className="underline underline-offset-4 decoration-purple-500 decoration-wavy cursor-pointer">𝕏</a>
     </p>
   </div>
 );

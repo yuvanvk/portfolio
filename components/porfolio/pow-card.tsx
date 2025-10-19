@@ -26,7 +26,7 @@ export const POWCard = () => {
       {current && (
         <m.div
           layoutId="container"
-          className="fixed top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 min-w-xs flex flex-col border p-3 rounded-xl space-y-5 z-20 bg-[#101010]"
+          className="fixed top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 min-w-[340px] md:min-w-sm flex flex-col border p-3 rounded-xl space-y-5 z-20 bg-[#FFFFFF] dark:bg-[#101010]"
         >
           <m.div
             layoutId="title"
@@ -37,23 +37,23 @@ export const POWCard = () => {
           <div>
             <m.div className="flex items-center justify-between">
               <div className="text-xl capitalize">{current.title}</div>
-              <m.div className="flex gap-x-2 items-center">
-                <FaGithub />
-                <IoIosGlobe />
+              <m.div className="flex gap-x-3 items-center">
+                <a target="_blank" href={current.github}><FaGithub className="cursor-pointer"/></a>
+                <a target="_blank" href={current.deploy}><IoIosGlobe className="cursor-pointer"/></a>
               </m.div>
             </m.div>
-            <div className="text-sm text-muted-foreground font-sans">
+            <div className="text-xs md:text-sm text-muted-foreground font-sans">
               {current.description}
             </div>
           </div>
-          <m.div className="flex items-center gap-1">
-            {["React", "Tailwind", "Typescript"].map((item) => (
+          <m.div className="flex flex-wrap items-center gap-1.5">
+            {current.tech.map((item) => (
               <Badge variant={"outline"}>{item}</Badge>
             ))}
           </m.div>
         </m.div>
       )}
-      <m.div className="space-y-3">
+      <m.div className="space-y-3 cursor-pointer">
         {POW.map((p, idx) => (
         <m.div
         onClick={() => setCurrent(p)}
@@ -69,8 +69,8 @@ export const POWCard = () => {
               {p.title}
             </m.div>
             <m.div className="flex flex-col">
-              <m.div className="capitalize">{p.title}</m.div>
-              <m.div className="text-sm text-muted-foreground font-sans">
+              <m.div className="capitalize ">{p.title}</m.div>
+              <m.div className="text-sm text-muted-foreground font-sans line-clamp-1">
                 {p.description}
               </m.div>
             </m.div>
