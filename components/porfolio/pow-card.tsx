@@ -47,8 +47,8 @@ export const POWCard = () => {
             </div>
           </div>
           <m.div className="flex flex-wrap items-center gap-1.5">
-            {current.tech.map((item) => (
-              <Badge variant={"outline"}>{item}</Badge>
+            {current.tech.map((item, idx) => (
+              <Badge key={idx} variant={"outline"}>{item}</Badge>
             ))}
           </m.div>
         </m.div>
