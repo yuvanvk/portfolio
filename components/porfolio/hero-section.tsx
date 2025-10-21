@@ -2,9 +2,7 @@
 export const HeroSection = () => (
   <div className="px-2 py-10 space-y-5">
     <p className="font-mono">
-      I like clean design and building apps that feel simple and intuitive.
-      Currently exploring ways to combine design and code to create better
-      experiences.
+      I’m a developer who loves learning new things and building stuff I enjoy — combining design and code to create clean, simple, and intuitive experiences.
     </p>
 
     <p className="font-mono">
