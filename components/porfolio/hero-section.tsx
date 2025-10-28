@@ -8,7 +8,7 @@ import { Badge } from "./badge";
 export const HeroSection = () => (
   <div className="px-0.5 py-10 space-y-5">
     <p className="font-brico font-light leading-relaxed">
-      I'm a developer who loves learning new things and building the stuff I enjoy using{" "}
+      I&apos;m a developer who loves learning new things and building the stuff I enjoy using{" "}
       <Badge>
         <NextJS />
         Next.js
