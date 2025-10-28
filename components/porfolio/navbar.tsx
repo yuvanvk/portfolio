@@ -41,10 +41,10 @@ export const Navbar = () => {
             </m.div>
           </m.div>
 
-          <span className="text-lg font-medium font-sans">abhi vignesh</span>
+          <span className="text-2xl font-medium font-instrument-serif">Abhi Vignesh.</span>
         </div>
 
-        <div className="flex items-center font-sans">IN</div>
+        <div className="flex items-center font-brico">IN</div>
       </div>
       <hr />
     </>

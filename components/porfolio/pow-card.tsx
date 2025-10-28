@@ -45,14 +45,16 @@ export const POWCard = () => {
                      min-w-[340px] md:min-w-sm flex flex-col border p-3 rounded-xl 
                      space-y-5 z-20 bg-[#FFFFFF] dark:bg-[#101010]"
         >
-          <m.div
+          {/* <m.div
             layoutId={`image-${current.title}`}
             className="w-full md:min-w-sm h-52 bg-[#EFEFF1] dark:bg-neutral-800 
                        text-6xl flex items-center justify-center rounded-lg 
                        font-medium font-mono uppercase"
           >
             {current.title}
-          </m.div>
+          </m.div> */}
+
+          <m.img layoutId={`image-${current.title}`} src="/MARS (1).png" className="w-full md:min-w-sm h-52 rounded-lg object-cover"/>
 
           <div>
             <m.div layoutId={`header-${current.title}`} className="flex items-center justify-between">
@@ -92,20 +94,15 @@ export const POWCard = () => {
             className="flex items-center justify-between rounded-xl w-full border px-1 py-1 font-mono"
           >
             <m.div className="flex gap-2 items-center">
-              <m.div
-                layoutId={`image-${p.title}`}
-                className="min-w-28 min-h-16 bg-[#EFEFF1] dark:bg-neutral-800 
-                           flex items-center justify-center rounded-lg font-medium uppercase"
-              >
-                {p.title}
-              </m.div>
+
+              <m.img layoutId={`image-${p.title}`} src="/MARS (1).png" className="max-w-28 max-h-16 rounded-lg"/>
               <m.div className="flex flex-col">
-                <m.div layoutId={`header-${p.title}`} className="capitalize">
+                <m.div layoutId={`header-${p.title}`} className="capitalize font-brico">
                   {p.title}
                 </m.div>
                 <m.div
                   layoutId={`desc-${p.title}`}
-                  className="text-sm text-muted-foreground font-sans line-clamp-1"
+                  className="text-sm text-muted-foreground font-brico line-clamp-1"
                 >
                   {p.description}
                 </m.div>
