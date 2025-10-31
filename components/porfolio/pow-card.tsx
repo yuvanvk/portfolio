@@ -17,7 +17,8 @@ export const POWCard = () => {
   const [loading, setLoading] = useState(true);
 
   useEffect(() => {
-    setLoading(false)
+    const timer = setTimeout(() => setLoading(false), 1000);
+    return () => clearTimeout(timer);
   }, [])
 
   useEffect(() => {
@@ -95,7 +96,7 @@ export const POWCard = () => {
           >
             <m.div className="flex gap-2 items-center">
 
-              {loading ? <Skeleton className="max-w-28 max-h-28 rounded-lg w-full h-full" /> : <m.img layoutId={`image-${p.title}`} src={p.imageUrl} className="max-w-28 max-h-16 rounded-lg"/>}
+              {loading ? <Skeleton className="h-16 w-28 rounded-xl" /> : <m.img layoutId={`image-${p.title}`} src={p.imageUrl} className="max-w-28 max-h-16 rounded-lg" />}
               <m.div className="flex flex-col">
                 <m.div layoutId={`header-${p.title}`} className="capitalize font-brico">
                   {p.title}
