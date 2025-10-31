@@ -8,10 +8,17 @@ import { FaGithub } from "react-icons/fa";
 import { IoIosGlobe } from "react-icons/io";
 import { FiArrowUpRight } from "react-icons/fi";
 import { POW, POWCardType } from "@/lib/crafts";
+import { Skeleton } from "../ui/skeleton";
 
 export const POWCard = () => {
   const [current, setCurrent] = useState<POWCardType | null>(null);
   const currentRef = useRef<HTMLDivElement | null>(null);
+
+  const [loading, setLoading] = useState(true);
+
+  useEffect(() => {
+    setLoading(false)
+  }, [])
 
   useEffect(() => {
     function handleClickOutside(e: MouseEvent) {
@@ -88,7 +95,7 @@ export const POWCard = () => {
           >
             <m.div className="flex gap-2 items-center">
 
-              <m.img layoutId={`image-${p.title}`} src={p.imageUrl} className="max-w-28 max-h-16 rounded-lg"/>
+              {loading ? <Skeleton className="max-w-28 max-h-28 rounded-lg w-full h-full" /> : <m.img layoutId={`image-${p.title}`} src={p.imageUrl} className="max-w-28 max-h-16 rounded-lg"/>}
               <m.div className="flex flex-col">
                 <m.div layoutId={`header-${p.title}`} className="capitalize font-brico">
                   {p.title}
