@@ -3,7 +3,7 @@
 import {  motion as m } from "motion/react";
 import { useEffect, useRef, useState } from "react";
 
-import { Badge } from "@/components/ui/badge";
+import { Badge } from "@/components/ui/badge"; 
 import { FaGithub } from "react-icons/fa";
 import { IoIosGlobe } from "react-icons/io";
 import { FiArrowUpRight } from "react-icons/fi";

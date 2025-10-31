@@ -1,8 +1,9 @@
 import type { Metadata } from "next";
-import {  Bricolage_Grotesque, Instrument_Serif, Poppins, Space_Grotesk } from "next/font/google";
-import { Geist_Mono, Geist } from "next/font/google";
+import {  Bricolage_Grotesque, Instrument_Serif } from "next/font/google";
+import {  Geist } from "next/font/google";
 import { ThemeProvider } from "@/components/ui/theme-provider";
 import { Analytics } from "@vercel/analytics/next"
+
 import "./globals.css";
 
 
