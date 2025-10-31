@@ -1,83 +1,86 @@
-import { Card, CardContent, CardHeader, CardTitle } from "../ui/card";
-import { FaReact } from "react-icons/fa";
-import { RiNextjsFill } from "react-icons/ri";
-import { BiLogoTypescript } from "react-icons/bi";
-import { SiExpress } from "react-icons/si";
-import { RiNodejsLine } from "react-icons/ri";
-import GsapIcon from "../ui/gsap-icon"
-import HonoJsIcon from "../ui/hono-icon";
-import { BiLogoPostgresql } from "react-icons/bi";
-import { SiPrisma } from "react-icons/si";
-import { FaAws } from "react-icons/fa";
-import { AiOutlineDocker } from "react-icons/ai";
-import { FaGitAlt } from "react-icons/fa";
-import { SiMongodb } from "react-icons/si";
-import { TailwindCssIcon } from "../ui/tailwind-icon";
-import { MotionIcon } from "../ui/motion-icon";
+
+import { Badge } from "./badge";
+import { React } from "../svgs/react";
+import { NextJS } from "../svgs/nextjs";
+import { TailwindCSS } from "../svgs/tailwindcss";
+import { TypeScript } from "../svgs/typesscript";
+import { Prisma } from "../svgs/prisma";
+import { Postgres } from "../svgs/postgres";
+import { AWS } from "../svgs/aws";
+import { Express } from "../svgs/express";
+import { NodeJs } from "../svgs/nodejs";
+import { Mongo } from "../svgs/mongo";
+import { Git } from "../svgs/git";
+import { Docker } from "../svgs/docker";
+import { Hono } from "../svgs/hono";
 
 export const Skills = () => {
-  
+  const skills = [
+    {
+      icon: React,
+      title: "react",
+    },
+    {
+      icon: NextJS,
+      title: "next.js",
+    },
+    {
+      icon: TailwindCSS,
+      title: "tailwindcss",
+    },
+    {
+      icon: TypeScript,
+      title: "typescript",
+    },
+    {
+      icon: Express,
+      title: "express",
+    },
+    {
+      icon: NodeJs,
+      title: "nodejs",
+    },
+    {
+      icon: Hono,
+      title: "hono",
+    },
+    {
+      icon: Mongo,
+      title: "mongodb",
+    },
+    {
+      icon: Postgres,
+      title: "postgres",
+    },
+    {
+      icon: Prisma,
+      title: "prisma",
+    },
+    {
+      icon: AWS,
+      title: "aws",
+    },
+    {
+      icon: Docker,
+      title: "docker",
+    },
+    {
+      icon: Git,
+      title: "git",
+    },
+  ];
 
-  const skills = [{
-    icon: FaReact,
-    title: "react"
-  }, {
-    icon: RiNextjsFill,
-    title: "next.js"
-  }, {
-    icon: TailwindCssIcon,
-    title: "tailwindcss"
-  },{
-    icon: GsapIcon,
-    title: "gsap"
-  }, {
-    icon: MotionIcon,
-    title: "motion"
-  }, {
-    icon: BiLogoTypescript,
-    title: "typescript"
-  }, {
-    icon: SiExpress,
-    title: "express"
-  }, {
-    icon: RiNodejsLine,
-    title: "nodejs"
-  }, {
-    icon: HonoJsIcon,
-    title: "hono"
-  }, {
-    icon: SiMongodb,
-    title: "mongodb"
-  }, {
-    icon: BiLogoPostgresql,
-    title: "postgres"
-  }, {
-    icon: SiPrisma,
-    title: "prisma"
-  }, {
-    icon: FaAws,
-    title: "aws"
-  }, {
-    icon: AiOutlineDocker,
-    title: "docker"
-  }, {
-    icon: FaGitAlt,
-    title: "git"
-  }]
-  
   return (
-    <Card className="font-satoshi max-w-2xl bg-transparent border-none shadow-none">
-      <CardHeader>
-        <CardTitle className="text-sm font-bold">skills</CardTitle>
-      </CardHeader>
-      <CardContent className="grid grid-cols-3 md:grid-cols-6 gap-1.5 justify-center text-xs">
-        {skills.map((s, idx) => (
-          <div key={idx} className="px-4 py-2 border rounded-lg hover:text-white dark:bg-neutral-900 hover:bg-neutral-800 transition duration-300 flex items-center gap-2  font-medium ">
-            <s.icon />
-            <div>{s.title}</div>
-          </div>
-        ))}
-      </CardContent>
-    </Card>
+    <div className="mb-16">
+      <div className="font-instrument-serif text-xl my-5">Technologies known</div>  
+      <div className=" flex flex-wrap gap-2">
+      {skills.map((s, idx) => (
+        <Badge key={idx} className="my-0 mx-0">
+          <s.icon />
+          <div className={`${s.title === "aws" ? "uppercase" : "capitalize"} font-brico `}>{s.title}</div>
+        </Badge>
+      ))}
+    </div>
+    </div>
   );
 };
