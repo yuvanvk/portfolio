@@ -87,11 +87,11 @@ export const POWCard = () => {
             onClick={() => setCurrent(p)}
             key={idx}
             layoutId={`card-${p.title}`}
-            className="flex items-center justify-between rounded-xl w-full border px-1 py-1 font-mono"
+            className="flex items-center justify-between rounded-xl w-full border px-1 py-1 font-mono bg-neutral-100 dark:bg-neutral-900"
           >
             <m.div className="flex gap-2 items-center">
 
-              <m.img layoutId={`image-${p.title}`} src={p.imageUrl} className="max-w-28 max-h-16 rounded-lg" />
+              <m.img layoutId={`image-${p.title}`} src={p.imageUrl} className="max-w-28 max-h-16 rounded-lg border shadow" />
               <m.div className="flex flex-col">
                 <m.div layoutId={`header-${p.title}`} className="capitalize font-brico">
                   {p.title}

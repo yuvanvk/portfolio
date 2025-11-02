@@ -29,7 +29,7 @@ export const POW: POWCardType[] = [
     title: "Strato",
     description: "Building an All-in-one AI chat app.",
     deploy: "https://nexus-two-sooty.vercel.app/",
-    github: "https://github.com/yuvanvk/nexus",
+    github: "https://github.com/yuvanvk/strato-ai",
     tech: ["Nextjs", "Typescript", "Tailwind CSS", "Prisma ORM", "Postgres"],
     imageUrl: "/strato.png",
   },
@@ -37,7 +37,7 @@ export const POW: POWCardType[] = [
     title: "Thoughts",
     description: "Building a Blogging platform.",
     deploy: "https://nexus-two-sooty.vercel.app/",
-    github: "https://github.com/yuvanvk/nexus",
+    github: "https://github.com/yuvanvk/thoughts",
     tech: [
       "Nextjs",
       "Typescript",
