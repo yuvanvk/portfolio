@@ -3,7 +3,7 @@ import {  Bricolage_Grotesque, Instrument_Serif } from "next/font/google";
 import {  Geist } from "next/font/google";
 import { ThemeProvider } from "@/components/ui/theme-provider";
 import { Analytics } from "@vercel/analytics/next"
-
+import { Toaster } from "@/components/ui/sonner"
 import "./globals.css";
 
 
@@ -52,6 +52,7 @@ export default function RootLayout({
           enableSystem
           disableTransitionOnChange
         >
+          <Toaster />
           {children}
          <Analytics />
         </ThemeProvider>

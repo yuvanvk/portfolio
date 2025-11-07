@@ -1,11 +1,8 @@
-
-
 import { HeroSection } from "@/components/porfolio/hero-section";
 import { Navbar } from "@/components/porfolio/navbar";
 import { POW } from "@/components/porfolio/pow";
+import { SideHustle } from "@/components/porfolio/side-hustle";
 import { Skills } from "@/components/porfolio/skills";
-
-
 
 export default function Home() {
   return (
@@ -13,6 +10,7 @@ export default function Home() {
       <Navbar />
       <HeroSection />
       <Skills />
+      <SideHustle />
       <POW />
     </div>
   );
