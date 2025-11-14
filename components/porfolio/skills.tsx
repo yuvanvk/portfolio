@@ -77,7 +77,7 @@ export const Skills = () => {
       {skills.map((s, idx) => (
         <Badge key={idx} className="my-0 mx-0">
           <s.icon />
-          <div className={`${s.title === "aws" ? "uppercase" : "capitalize"} font-brico `}>{s.title}</div>
+          <div className={`${s.title === "aws" ? "uppercase" : "capitalize"} font-mono font-medium `}>{s.title}</div>
         </Badge>
       ))}
     </div>

@@ -93,12 +93,12 @@ export const POWCard = () => {
 
               <m.img layoutId={`image-${p.title}`} src={p.imageUrl} className="max-w-28 max-h-16 rounded-lg border shadow" />
               <m.div className="flex flex-col">
-                <m.div layoutId={`header-${p.title}`} className="capitalize font-brico">
+                <m.div layoutId={`header-${p.title}`} className="capitalize font-mono">
                   {p.title}
                 </m.div>
                 <m.div
                   layoutId={`desc-${p.title}`}
-                  className="text-sm text-muted-foreground font-brico line-clamp-1"
+                  className="text-sm text-muted-foreground font-mono line-clamp-1"
                 >
                   {p.description}
                 </m.div>
