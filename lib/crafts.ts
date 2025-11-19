@@ -28,7 +28,7 @@ export const POW: POWCardType[] = [
   {
     title: "Strato",
     description: "Building an All-in-one AI chat app.",
-    deploy: "https://nexus-two-sooty.vercel.app/",
+    deploy: "https://strarto-ai-yvk.vercel.app/chat",
     github: "https://github.com/yuvanvk/strato-ai",
     tech: ["Nextjs", "Typescript", "Tailwind CSS", "Prisma ORM", "Postgres"],
     imageUrl: "/strato.png",
