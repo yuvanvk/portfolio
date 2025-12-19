@@ -1,6 +1,19 @@
 "use client";
 
+import { useEffect } from "react";
+
 export const CommandToobar = () => {
+
+  useEffect(() => {
+    const handleCmdKPress = (e: KeyboardEvent) => {
+      if((e.metaKey || e.ctrlKey) && e.key.toLowerCase() === "k") {
+        e.preventDefault();
+        alert("dfjdfjdjfodjfoj")
+      }
+    }
+    window.addEventListener("keydown", handleCmdKPress)
+    return () => window.removeEventListener("keydown", handleCmdKPress)
+  }, [])
   return (
 
     <div className="flex items-center gap-x-2 px-2 py-2 bg-neutral-900 w-fit rounded-xl fixed bottom-5 right-5">

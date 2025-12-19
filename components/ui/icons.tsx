@@ -54,6 +54,512 @@ export const Git = () => (
   </svg>
 );
 
+
+export const tRPC = (props: SVGProps<SVGSVGElement>) => (
+  <svg {...props} fill="none" viewBox="0 0 512 512" width={20}>
+    <rect width="512" height="512" fill="#398CCB" rx="150" />
+    <path
+      fill="#fff"
+      fillRule="evenodd"
+      d="m255.446 75 71.077 41.008v22.548l86.031 49.682v84.986l23.077 13.322v82.062L364.6 409.615l-31.535-18.237-76.673 44.268-76.214-44.012-31.093 17.981-71.031-41.077v-81.992l22.177-12.803v-85.505l84.184-48.6.047-.002v-23.628L255.446 75Zm71.077 84.879v38.144l-71.031 41.008-71.03-41.008v-37.087l-.047.002-65.723 37.962v64.184l30.393-17.546 71.03 41.008v81.992l-21.489 12.427 57.766 33.358 58.226-33.611-21.049-12.174v-81.992l71.031-41.008 29.492 17.027V198.9l-67.569-39.021Zm-14.492 198.09v-50.054l43.338 25.016v50.054l-43.338-25.016Zm105.138-50.123-43.338 25.016v50.123l43.338-25.085v-50.054ZM96.515 357.9v-50.054l43.339 25.016v50.053L96.515 357.9Zm105.139-50.054-43.339 25.016v50.053l43.339-25.015v-50.054Zm119.608-15.923 43.338-25.015 43.338 25.015-43.338 25.039-43.338-25.039Zm-172.177-25.085-43.339 25.085 43.339 24.969 43.338-24.969-43.338-25.085Zm53.838-79.476v-50.054l43.292 25.038v50.031l-43.292-25.015Zm105.092-50.054-43.292 25.038v50.008l43.292-24.992v-50.054Zm-95.861-15.97 43.292-25.015 43.339 25.015-43.339 25.016-43.292-25.016Z"
+      clipRule="evenodd"
+    />
+  </svg>
+);
+
+import type { SVGProps } from "react";
+
+const Redis = (props: SVGProps<SVGSVGElement>) => (
+  <svg {...props} preserveAspectRatio="xMidYMid" viewBox="0 0 256 220" width={20}>
+    <path
+      d="M246 169c-13.7 7-84.5 36.2-99.5 44-15.1 7.9-23.5 7.8-35.4 2.1C99.2 209.4 24 179 10.3 172.5 3.6 169.3 0 166.5 0 164v-26s98-21.3 113.9-27c15.8-5.6 21.3-5.8 34.8-.9 13.4 5 94 19.5 107.3 24.3V160c0 2.5-3 5.3-10 9"
+      fill="#912626"
+    />
+    <path
+      d="M246 143.2c-13.7 7.1-84.5 36.2-99.5 44-15.1 8-23.5 7.9-35.4 2.2-11.9-5.7-87.2-36.1-100.8-42.6-13.5-6.5-13.8-11-.5-16.2 13.4-5.2 88.2-34.6 104-40.3 16-5.6 21.4-5.8 34.9-1 13.4 5 83.8 33 97.1 37.9 13.3 4.9 13.8 8.9.2 16"
+      fill="#C6302B"
+    />
+    <path
+      d="M246 127c-13.7 7.2-84.5 36.3-99.5 44.2-15.1 7.8-23.5 7.7-35.4 2-11.9-5.6-87.2-36-100.8-42.6-6.7-3.2-10.3-6-10.3-8.5V96.2s98-21.3 113.9-27c15.8-5.7 21.3-5.9 34.8-1 13.4 5 94 19.5 107.3 24.4V118c0 2.5-3 5.4-10 9"
+      fill="#912626"
+    />
+    <path
+      d="M246 101.4c-13.7 7-84.5 36.2-99.5 44-15.1 7.9-23.5 7.8-35.4 2.1C99.2 141.8 24 111.4 10.3 105c-13.5-6.5-13.8-11-.5-16.1C23.2 83.5 98 54 113.8 48.5c16-5.7 21.4-6 34.9-1 13.4 5 83.8 33 97.1 37.8 13.3 5 13.8 9 .2 16"
+      fill="#C6302B"
+    />
+    <path
+      d="M246 83.7c-13.7 7-84.5 36.2-99.5 44-15.1 7.9-23.5 7.8-35.4 2.1C99.2 124.1 24 93.7 10.3 87.2 3.6 84 0 81.2 0 78.7v-26s98-21.3 113.9-27c15.8-5.6 21.3-5.8 34.8-.9 13.4 5 94 19.5 107.3 24.4v25.5c0 2.5-3 5.3-10 9"
+      fill="#912626"
+    />
+    <path
+      d="M246 58c-13.7 7-84.5 36.1-99.5 44-15.1 7.9-23.5 7.8-35.4 2C99.2 98.5 24 68 10.3 61.6c-13.5-6.5-13.8-11-.5-16.2C23.2 40.1 98 10.7 113.8 5c16-5.6 21.4-5.8 34.9-.9 13.4 5 83.8 33 97.1 37.8 13.3 4.9 13.8 9 .2 16"
+      fill="#C6302B"
+    />
+    <path
+      d="m159.3 32.8-22 2.2-5 11.9-8-13.2L99 31.4l19-6.9-5.8-10.5 17.8 7 16.7-5.5-4.5 10.9 17 6.4M131 90.3l-41-17 58.8-9.1-17.8 26M74 39.3c17.5 0 31.5 5.5 31.5 12.2 0 6.8-14 12.2-31.4 12.2s-31.5-5.4-31.5-12.2c0-6.7 14.1-12.2 31.5-12.2"
+      fill="#FFF"
+    />
+    <path d="M185.3 36 220 49.8l-34.8 13.7V36" fill="#621B1C" />
+    <path d="M146.8 51.2 185.3 36v27.5l-3.8 1.5-34.7-13.8" fill="#9A2928" />
+  </svg>
+);
+
+export { Redis };
+
+
+const Kubernetes = (props: SVGProps<SVGSVGElement>) => (
+  <svg {...props} viewBox="0 0 722.8 702" width={20}>
+    <path
+      style={{
+        fill: "#326ce5",
+        fillOpacity: "1",
+        stroke: "#fff",
+        strokeWidth: "0",
+        strokeMiterlimit: "4",
+        strokeOpacity: "1",
+        strokeDasharray: "none",
+      }}
+      d="M365 185a47 46 0 0 0-18 4L103 306a47 46 0 0 0-25 32L18 600a47 46 0 0 0 6 35 47 46 0 0 0 3 4l169 210a47 46 0 0 0 36 18h271a47 46 0 0 0 37-18l169-210a47 46 0 0 0 9-39l-60-263a47 46 0 0 0-26-31L388 189a47 46 0 0 0-23-4z"
+      transform="translate(-6 -175)"
+    />
+    <path
+      d="M368 274c-8 0-15 7-15 16v4l2 14 2 27c-1 3-3 6-5 7v7a190 190 0 0 0-122 58l-6-3c-2 0-5 1-8-1l-20-18-10-10-3-3c-3-2-7-4-10-4-5 0-9 2-12 5-5 7-3 16 4 22l3 3 12 7 22 15c2 2 3 7 3 8l5 5c-26 37-37 84-30 131l-6 2c-2 2-4 6-7 7l-26 4-14 1-4 1c-9 2-14 10-13 18 2 8 11 12 19 11h1v-1h4l13-5c9-4 17-7 25-8l9 3 6-1c15 45 45 82 84 105l-2 7c1 2 2 5 1 8l-13 24-8 11-2 4c-4 8-1 18 6 21 8 4 17 0 20-8l2-4 5-13c3-10 6-20 11-27l6-3 3-6a189 189 0 0 0 135 1l4 5c2 1 5 2 7 5l10 24 4 14 2 4c4 8 13 11 20 8 8-4 10-13 7-21l-2-4-8-12c-6-8-10-15-13-23-1-4 0-6 1-8l-2-6c40-24 70-62 84-106l6 1c2-2 4-4 8-3 8 1 16 4 26 7l13 5 4 1c9 2 17-3 19-10 2-8-4-16-12-18l-5-1-14-1c-10-1-18-2-26-5-3-1-5-5-6-6l-6-2a189 189 0 0 0-31-131l6-5c0-3 0-5 2-8 6-6 13-10 22-16l12-7 4-2c7-6 8-16 3-22s-15-7-22-1l-3 2-10 11c-7 7-13 13-19 17-3 2-7 2-9 1l-6 4c-31-33-75-54-121-58v-7c-2-2-5-3-5-7-1-8 0-16 1-27l2-14v-4c0-9-6-16-14-16zm-19 113-4 77a13 13 0 0 1-21 10l-63-44a151 151 0 0 1 88-43zm37 0c33 5 64 20 88 43l-63 44a13 13 0 0 1-21-10zm-148 71 58 52a13 13 0 0 1-5 22l-74 22c-4-35 4-68 21-96zm259 0a153 153 0 0 1 22 95l-74-21a13 13 0 0 1-5-22h-1l58-52zm-141 56h23l15 18-5 23-21 10-21-10-6-23zm75 62h3l77 13c-12 32-33 59-61 77l-30-72a13 13 0 0 1 11-18zm-128 1a13 13 0 0 1 12 18l-29 71c-27-18-49-44-61-77l76-12h2zm64 31c2-1 4 0 6 1 3 1 5 3 6 5l38 68a154 154 0 0 1-98-1l37-67c3-4 7-6 11-6z"
+      style={{
+        fontSize: "medium",
+        fontStyle: "normal",
+        fontVariant: "normal",
+        fontWeight: "400",
+        fontStretch: "normal",
+        textIndent: "0",
+        textAlign: "start",
+        textDecoration: "none",
+        lineHeight: "normal",
+        letterSpacing: "normal",
+        wordSpacing: "normal",
+        textTransform: "none",
+        direction: "ltr",
+        blockProgression: "tb",
+        //@ts-ignore
+        writingMode: "lr-tb",
+        textAnchor: "start",
+        baselineShift: "baseline",
+        color: "#000",
+        fill: "#fff",
+        fillOpacity: "1",
+        stroke: "#fff",
+        strokeWidth: ".25",
+        strokeMiterlimit: "4",
+        strokeOpacity: "1",
+        strokeDasharray: "none",
+        marker: "none",
+        visibility: "visible",
+        display: "inline",
+        overflow: "visible",
+        fontFamily: "Sans",
+        InkscapeFontSpecification: "Sans",
+      }}
+      transform="translate(-6 -175)"
+    />
+  </svg>
+);
+
+export { Kubernetes };
+
+
+
+const TanStack = (props: SVGProps<SVGSVGElement>) => (
+  <svg
+    {...props}
+    xmlnsXlink="http://www.w3.org/1999/xlink"
+    viewBox="0 0 633 633"
+    width={20}
+  >
+    <defs>
+      <linearGradient id="tanstack__b" x1="50%" x2="50%" y1="0%" y2="71.65%">
+        <stop offset="0%" stop-color="#6BDAFF" />
+        <stop offset="31.922%" stop-color="#F9FFB5" />
+        <stop offset="70.627%" stop-color="#FFA770" />
+        <stop offset="100%" stop-color="#FF7373" />
+      </linearGradient>
+      <linearGradient
+        id="tanstack__d"
+        x1="43.996%"
+        x2="53.441%"
+        y1="8.54%"
+        y2="93.872%"
+      >
+        <stop offset="0%" stop-color="#673800" />
+        <stop offset="100%" stop-color="#B65E00" />
+      </linearGradient>
+      <linearGradient id="tanstack__e" x1="50%" x2="50%" y1="0%" y2="100%">
+        <stop offset="0%" stop-color="#2F8A00" />
+        <stop offset="100%" stop-color="#90FF57" />
+      </linearGradient>
+      <linearGradient id="tanstack__f" x1="50%" x2="50%" y1="0%" y2="100%">
+        <stop offset="0%" stop-color="#2F8A00" />
+        <stop offset="100%" stop-color="#90FF57" />
+      </linearGradient>
+      <linearGradient id="tanstack__g" x1="50%" x2="50%" y1="0%" y2="100%">
+        <stop offset="0%" stop-color="#2F8A00" />
+        <stop offset="100%" stop-color="#90FF57" />
+      </linearGradient>
+      <linearGradient id="tanstack__h" x1="50%" x2="50%" y1="0%" y2="100%">
+        <stop offset="0%" stop-color="#2F8A00" />
+        <stop offset="100%" stop-color="#90FF57" />
+      </linearGradient>
+      <linearGradient id="tanstack__i" x1="50%" x2="50%" y1="0%" y2="100%">
+        <stop offset="0%" stop-color="#2F8A00" />
+        <stop offset="100%" stop-color="#90FF57" />
+      </linearGradient>
+      <linearGradient id="tanstack__j" x1="50%" x2="50%" y1="0%" y2="100%">
+        <stop offset="0%" stop-color="#2F8A00" />
+        <stop offset="100%" stop-color="#90FF57" />
+      </linearGradient>
+      <linearGradient
+        id="tanstack__k"
+        x1="92.9%"
+        x2="8.641%"
+        y1="45.768%"
+        y2="54.892%"
+      >
+        <stop offset="0%" stop-color="#EE2700" />
+        <stop offset="100%" stop-color="#FF008E" />
+      </linearGradient>
+      <linearGradient
+        id="tanstack__l"
+        x1="61.109%"
+        x2="43.717%"
+        y1="3.633%"
+        y2="43.072%"
+      >
+        <stop offset="0%" stop-color="#FFF400" />
+        <stop offset="100%" stop-color="#3C8700" />
+      </linearGradient>
+      <linearGradient id="tanstack__m" x1="50%" x2="50%" y1="0%" y2="100%">
+        <stop offset="0%" stop-color="#FFDF00" />
+        <stop offset="100%" stop-color="#FF9D00" />
+      </linearGradient>
+      <linearGradient
+        id="tanstack__n"
+        x1="127.279%"
+        x2="0%"
+        y1="49.778%"
+        y2="50.222%"
+      >
+        <stop offset="0%" stop-color="#FFA400" />
+        <stop offset="100%" stop-color="#FF5E00" />
+      </linearGradient>
+      <linearGradient
+        id="tanstack__o"
+        x1="127.279%"
+        x2="0%"
+        y1="47.531%"
+        y2="52.469%"
+      >
+        <stop offset="0%" stop-color="#FFA400" />
+        <stop offset="100%" stop-color="#FF5E00" />
+      </linearGradient>
+      <linearGradient
+        id="tanstack__p"
+        x1="127.279%"
+        x2="0%"
+        y1="46.195%"
+        y2="53.805%"
+      >
+        <stop offset="0%" stop-color="#FFA400" />
+        <stop offset="100%" stop-color="#FF5E00" />
+      </linearGradient>
+      <linearGradient
+        id="tanstack__q"
+        x1="127.279%"
+        x2="0%"
+        y1="35.33%"
+        y2="64.67%"
+      >
+        <stop offset="0%" stop-color="#FFA400" />
+        <stop offset="100%" stop-color="#FF5E00" />
+      </linearGradient>
+      <linearGradient
+        id="tanstack__r"
+        x1="127.279%"
+        x2="0%"
+        y1="4.875%"
+        y2="95.125%"
+      >
+        <stop offset="0%" stop-color="#FFA400" />
+        <stop offset="100%" stop-color="#FF5E00" />
+      </linearGradient>
+      <linearGradient
+        id="tanstack__s"
+        x1="78.334%"
+        x2="31.668%"
+        y1="0%"
+        y2="100%"
+      >
+        <stop offset="0%" stop-color="#FFA400" />
+        <stop offset="100%" stop-color="#FF5E00" />
+      </linearGradient>
+      <linearGradient
+        id="tanstack__t"
+        x1="57.913%"
+        x2="44.88%"
+        y1="0%"
+        y2="100%"
+      >
+        <stop offset="0%" stop-color="#FFA400" />
+        <stop offset="100%" stop-color="#FF5E00" />
+      </linearGradient>
+      <linearGradient
+        id="tanstack__u"
+        x1="50.495%"
+        x2="49.68%"
+        y1="0%"
+        y2="100%"
+      >
+        <stop offset="0%" stop-color="#FFA400" />
+        <stop offset="100%" stop-color="#FF5E00" />
+      </linearGradient>
+      <circle id="tanstack__a" cx="308.5" cy="308.5" r="308.5" />
+      <circle id="tanstack__v" cx="307.5" cy="308.5" r="316.5" />
+    </defs>
+    <g fill="none" fillRule="evenodd" transform="translate(9 8)">
+      <mask id="tanstack__c" fill="#fff">
+        <use xlinkHref="#tanstack__a" />
+      </mask>
+      <use xlinkHref="#tanstack__a" fill="url(#tanstack__b)" />
+      <ellipse
+        cx="81.5"
+        cy="602.5"
+        fill="#015064"
+        stroke="#00CFE2"
+        strokeWidth="25"
+        mask="url(#tanstack__c)"
+        rx="214.5"
+        ry="185.968"
+      />
+      <ellipse
+        cx="535.5"
+        cy="602.5"
+        fill="#015064"
+        stroke="#00CFE2"
+        strokeWidth="25"
+        mask="url(#tanstack__c)"
+        rx="214.5"
+        ry="185.968"
+      />
+      <ellipse
+        cx="81.5"
+        cy="640.5"
+        fill="#015064"
+        stroke="#00A8B8"
+        strokeWidth="25"
+        mask="url(#tanstack__c)"
+        rx="214.5"
+        ry="185.968"
+      />
+      <ellipse
+        cx="535.5"
+        cy="640.5"
+        fill="#015064"
+        stroke="#00A8B8"
+        strokeWidth="25"
+        mask="url(#tanstack__c)"
+        rx="214.5"
+        ry="185.968"
+      />
+      <ellipse
+        cx="81.5"
+        cy="676.5"
+        fill="#015064"
+        stroke="#007782"
+        strokeWidth="25"
+        mask="url(#tanstack__c)"
+        rx="214.5"
+        ry="185.968"
+      />
+      <ellipse
+        cx="535.5"
+        cy="676.5"
+        fill="#015064"
+        stroke="#007782"
+        strokeWidth="25"
+        mask="url(#tanstack__c)"
+        rx="214.5"
+        ry="185.968"
+      />
+      <g mask="url(#tanstack__c)">
+        <path
+          fill="url(#tanstack__d)"
+          stroke="#6E3A00"
+          strokeWidth="6.088"
+          d="M98.318 88.007c7.691 37.104 16.643 72.442 26.856 106.013 10.212 33.571 25.57 68.934 46.07 106.088l-51.903 11.67c-10.057-60.01-17.232-99.172-21.525-117.487-4.293-18.315-10.989-51.434-20.089-99.357l20.591-6.927"
+          transform="scale(-1 1) rotate(25 -300.37 -553.013)"
+        />
+        <g stroke="#2F8A00">
+          <path
+            fill="url(#tanstack__e)"
+            strokeWidth="9.343"
+            d="M108.544 66.538s-13.54-21.305-37.417-27.785c-15.917-4.321-33.933.31-54.048 13.892C33.464 65.975 47.24 73.52 58.405 75.28c16.749 2.64 50.14-8.74 50.14-8.74Z"
+            transform="rotate(1 -6061.691 5926.397)"
+          />
+          <path
+            fill="url(#tanstack__f)"
+            strokeWidth="9.343"
+            d="M108.544 67.138s-47.187-5.997-81.077 19.936C4.873 104.362-3.782 137.794 1.502 187.369c28.42-29.22 48.758-50.836 61.016-64.846 18.387-21.016 46.026-55.385 46.026-55.385Z"
+            transform="rotate(1 -6061.691 5926.397)"
+          />
+          <path
+            fill="url(#tanstack__g)"
+            strokeWidth="9.343"
+            d="M108.544 66.538c-1.96-21.705 3.98-38.018 17.82-48.94C140.203 6.674 154.85.808 170.303 0c-4.865 21.527-12.373 36.314-22.524 44.361-10.151 8.048-23.23 15.44-39.236 22.177Z"
+            transform="rotate(1 -6061.691 5926.397)"
+          />
+          <path
+            fill="url(#tanstack__h)"
+            strokeWidth="9.343"
+            d="M108.544 67.138c29.838-31.486 61.061-42.776 93.669-33.869C234.82 42.176 253.749 60.785 259 89.096c-34.898-3.657-59.974-6.343-75.228-8.058-15.254-1.716-40.33-6.349-75.228-13.9Z"
+            transform="rotate(1 -6061.691 5926.397)"
+          />
+          <path
+            fill="url(#tanstack__i)"
+            strokeWidth="9.343"
+            d="M108.544 67.138c34.868-9.381 64.503-3.658 88.905 17.17 24.402 20.829 39.656 46.686 45.762 77.571-39.626-7.574-68.4-20.115-86.322-37.624a395.051 395.051 0 0 1-48.345-57.117Z"
+            transform="rotate(1 -6061.691 5926.397)"
+          />
+          <path
+            fill="url(#tanstack__j)"
+            strokeWidth="9.343"
+            d="M108.544 67.138C76.206 82.6 57.608 105.366 52.75 135.436c-4.858 30.07-.292 62.89 13.698 98.462 24.873-41.418 38.905-71.368 42.096-89.849 3.191-18.48 3.191-44.118 0-76.91Z"
+            transform="rotate(1 -6061.691 5926.397)"
+          />
+          <path
+            strokeLinecap="round"
+            strokeWidth="5.91"
+            d="M211.284 173.477c-13.851 21.992-23.291 42.022-28.32 60.093-5.03 18.071-8.175 33.143-9.436 45.216"
+          />
+          <path
+            strokeLinecap="round"
+            strokeWidth="5.91"
+            d="M209.814 176.884c-23.982 2.565-42.792 10.469-56.428 23.714-13.639 13.245-23.483 26.136-29.536 38.674M219.045 167.299c29.028-7.723 50.972-10.173 65.831-7.352 14.859 2.822 26.807 7.659 35.842 14.51M211.31 172.618c20.29 9.106 38.353 19.052 54.186 29.837 15.833 10.786 27.714 20.99 35.643 30.617"
+          />
+        </g>
+        <path
+          stroke="#830305"
+          strokeLinecap="round"
+          strokeLinejoin="bevel"
+          strokeWidth="6.937"
+          d="m409.379 398.157-23.176 18.556M328.04 375.516l-22.313 28.398M312.904 353.698l53.18 59.816"
+        />
+        <path
+          fill="url(#tanstack__k)"
+          d="M67.585 27.463H5.68C1.893 28.148 0 30.38 0 34.16c0 3.78 1.893 6.211 5.68 7.293h67.17l41.751-30.356c2.488-2.646 2.794-5.315.92-8.006s-4.6-3.626-8.177-2.803l-39.76 27.174Z"
+          transform="scale(-1 1) rotate(-9 2092.128 2856.854)"
+        />
+        <path
+          fill="#D8D8D8"
+          stroke="#FFF"
+          strokeLinecap="round"
+          strokeLinejoin="bevel"
+          strokeWidth="4.414"
+          d="m402.861 391.51.471-4.088M382.21 388.752l.472-4.087M361.546 385.404l.485-3.845M337.59 371.883l2.56-2.498M324.276 359.567l2.56-2.497"
+        />
+      </g>
+      <ellipse
+        cx="308.5"
+        cy="720.5"
+        fill="url(#tanstack__l)"
+        mask="url(#tanstack__c)"
+        rx="266"
+        ry="316.5"
+      />
+      <ellipse
+        cx="308.5"
+        cy="720.5"
+        stroke="#6DA300"
+        stroke-opacity=".502"
+        strokeWidth="26"
+        mask="url(#tanstack__c)"
+        rx="253"
+        ry="303.5"
+      />
+      <g mask="url(#tanstack__c)">
+        <g transform="translate(389 -32)">
+          <circle cx="168.5" cy="113.5" r="113.5" fill="url(#tanstack__m)" />
+          <circle
+            cx="168.5"
+            cy="113.5"
+            r="106"
+            stroke="#FFC900"
+            stroke-opacity=".529"
+            strokeWidth="15"
+          />
+          <path
+            stroke="url(#tanstack__n)"
+            strokeLinecap="round"
+            strokeLinejoin="bevel"
+            strokeWidth="12"
+            d="M30 113H0"
+          />
+          <path
+            stroke="url(#tanstack__o)"
+            strokeLinecap="round"
+            strokeLinejoin="bevel"
+            strokeWidth="12"
+            d="M33.5 79.5 7 74"
+          />
+          <path
+            stroke="url(#tanstack__p)"
+            strokeLinecap="round"
+            strokeLinejoin="bevel"
+            strokeWidth="12"
+            d="m34 146-29 8"
+          />
+          <path
+            stroke="url(#tanstack__q)"
+            strokeLinecap="round"
+            strokeLinejoin="bevel"
+            strokeWidth="12"
+            d="m45 177-24 13"
+          />
+          <path
+            stroke="url(#tanstack__r)"
+            strokeLinecap="round"
+            strokeLinejoin="bevel"
+            strokeWidth="12"
+            d="m67 204-20 19"
+          />
+          <path
+            stroke="url(#tanstack__s)"
+            strokeLinecap="round"
+            strokeLinejoin="bevel"
+            strokeWidth="12"
+            d="m94.373 227-13.834 22.847"
+          />
+          <path
+            stroke="url(#tanstack__t)"
+            strokeLinecap="round"
+            strokeLinejoin="bevel"
+            strokeWidth="12"
+            d="M127.5 243.5 120 268"
+          />
+          <path
+            stroke="url(#tanstack__u)"
+            strokeLinecap="round"
+            strokeLinejoin="bevel"
+            strokeWidth="12"
+            d="m167.5 252.5.5 24.5"
+          />
+        </g>
+      </g>
+      <circle cx="307.5" cy="308.5" r="304" stroke="#000" strokeWidth="25" />
+    </g>
+  </svg>
+);
+
+export { TanStack };
+
+
+
 export const Hono = () => (
   <svg xmlns="http://www.w3.org/2000/svg" width="15" viewBox="0 0 256 330">
     <path

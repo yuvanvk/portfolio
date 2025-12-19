@@ -2,7 +2,7 @@
 
 import { cn } from "@/lib/utils";
 import { usePathname, useRouter } from "next/navigation";
-import { useRef } from "react";
+import { useEffect, useRef } from "react";
 
 export const Navbar = () => {
   const audioRef = useRef<HTMLAudioElement | null>(null);
@@ -50,6 +50,32 @@ export const Navbar = () => {
       route: "/agency",
     },
   ];
+  useEffect(() => {
+    const handleKeyPress = (e: KeyboardEvent) => {
+      
+      switch (e.key) {
+        case "h":
+          router.push("/")
+          break
+        case "a":
+          router.push("/about")
+          break
+        case "p":
+          router.push("/projects")
+          break
+        case "c":
+          router.push("/contact")
+          break
+        case "y":
+          router.push("/agency")
+          break
+      }
+    }
+
+    window.addEventListener("keydown", handleKeyPress)
+    return () => window.removeEventListener("keydown", handleKeyPress)
+  }, [router])
+
 
   return (
     <div className="fixed w-full z-10 top-8">
@@ -87,7 +113,7 @@ export const Navbar = () => {
         ))}
 
         <div className="rounded-full flex items-center justify-between gap-x-2 tracking-tighter text-xs font-mono bg-neutral-900 border px-3 py-1">
-          <div className="size-2 bg-lime-500 rounded-full" />
+          <div className="size-2 bg-lime-500 rounded-full animate-pulse" />
           <div>13:11</div>
           <div>GMT+5: 30</div>
         </div>

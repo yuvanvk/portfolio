@@ -1,6 +1,6 @@
 
 import { Badge } from "./badge";
-import { React } from "../ui/icons"; 
+import { Kubernetes, React, Redis, TanStack, tRPC } from "../ui/icons"; 
 import { NextJS } from "../ui/icons";
 import { TailwindCSS } from "../ui/icons";
 import { TypeScript } from "../ui/icons";
@@ -13,6 +13,7 @@ import { Mongo } from "../ui/icons";
 import { Git } from "../ui/icons";
 import { Docker } from "../ui/icons";
 import { Hono } from "../ui/icons";
+
 
 export const Skills = () => {
   const skills = [
@@ -65,9 +66,25 @@ export const Skills = () => {
       title: "docker",
     },
     {
+      icon: TanStack,
+      title: "tanstack query"
+    },
+    {
+      icon: tRPC,
+      title: "TRPC"
+    },
+    {
       icon: Git,
       title: "git",
     },
+    {
+      icon: Kubernetes,
+      title: "Kubernetes"
+    },
+    {
+      icon: Redis,
+      title: "redis"
+    }
   ];
   
   return (
