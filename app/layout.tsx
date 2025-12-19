@@ -5,6 +5,8 @@ import { ThemeProvider } from "@/components/ui/theme-provider";
 import { Analytics } from "@vercel/analytics/next"
 import { Toaster } from "@/components/ui/sonner"
 import "./globals.css";
+import { Navbar } from "@/components/porfolio/navbar";
+import { CommandToobar } from "@/components/porfolio/command-toolbar";
 
 
 
@@ -54,6 +56,8 @@ export default function RootLayout({
         >
           <Toaster />
           {children}
+          <Navbar />
+          <CommandToobar />
          <Analytics />
         </ThemeProvider>
       </body>
