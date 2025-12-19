@@ -1,4 +1,4 @@
-import { React } from "../svgs/react";
+
 
 export const HeroSection = () => (
   <div className="flex items-center justify-start py-10">

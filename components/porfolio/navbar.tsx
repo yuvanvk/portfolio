@@ -1,42 +1,67 @@
 "use client";
 
-export const Navbar = () => {
+import { useRef } from "react";
 
-  const pages = [{
-    name: "home",
-  }]
+export const Navbar = () => {
+  const audioRef = useRef<HTMLAudioElement | null>(null);
+
+  const playSound = () => {
+    if (!audioRef.current) {
+      audioRef.current = new Audio("/audio/tap_01.wav");
+    }
+
+    audioRef.current.currentTime = 0;
+    audioRef.current.play();
+  };
+
+  
   return (
     <div className="fixed w-full z-10 top-8">
-      <div className="flex items-center justify-center gap-x-4 backdrop-blur-md tracking-tighter max-w-3xl mx-auto" >
-        <div className="flex items-center gap-x-1 hover:bg-neutral-900 p-2 rounded-lg cursor-pointer">
+      <div className="flex items-center justify-center gap-x-4 backdrop-blur-md tracking-tighter max-w-3xl mx-auto">
+        <div
+          onMouseEnter={playSound}
+          className="flex items-center gap-x-1 hover:bg-neutral-900 p-2 rounded-lg cursor-pointer"
+        >
           <span className="text-sm">Home</span>
           <span className="size-4 hidden border border-white items-center justify-center px-1 text-xs md:flex rounded-sm">
             H
           </span>
         </div>
 
-        <div className="flex items-center gap-x-1 text-neutral-700 hover:bg-neutral-900 p-2 rounded-lg cursor-pointer">
+        <div
+          onMouseEnter={playSound}
+          className="flex items-center gap-x-1 text-neutral-700 hover:bg-neutral-900 p-2 rounded-lg cursor-pointer"
+        >
           <span className="text-sm">About</span>
           <span className="size-4 hidden border border-neutral-700 items-center justify-center px-1 text-xs md:flex rounded-sm">
             A
           </span>
         </div>
 
-        <div className="flex items-center gap-x-1 text-neutral-700 hover:bg-neutral-900 p-2 rounded-lg cursor-pointer">
+        <div
+          onMouseEnter={playSound}
+          className="flex items-center gap-x-1 text-neutral-700 hover:bg-neutral-900 p-2 rounded-lg cursor-pointer"
+        >
           <span className="text-sm">Projects</span>
           <span className="size-4 hidden border border-neutral-700 items-center justify-center px-1 text-xs md:flex rounded-sm">
             P
           </span>
         </div>
 
-        <div className="flex items-center gap-x-1 text-neutral-700 hover:bg-neutral-900 p-2 rounded-lg cursor-pointer">
+        <div
+          onMouseEnter={playSound}
+          className="flex items-center gap-x-1 text-neutral-700 hover:bg-neutral-900 p-2 rounded-lg cursor-pointer"
+        >
           <span className="text-sm">Contact</span>
           <span className="size-4 hidden border border-neutral-700 items-center justify-center px-1 text-xs md:flex rounded-sm">
             C
           </span>
         </div>
 
-        <div className="flex items-center gap-x-1 text-neutral-700 hover:bg-neutral-900 p-2 rounded-lg cursor-pointer">
+        <div
+          onMouseEnter={playSound}
+          className="flex items-center gap-x-1 text-neutral-700 hover:bg-neutral-900 p-2 rounded-lg cursor-pointer"
+        >
           <span className="text-sm">Agency</span>
           <span className="size-4 hidden border border-neutral-700 items-center justify-center px-1 text-xs md:flex rounded-sm">
             Y

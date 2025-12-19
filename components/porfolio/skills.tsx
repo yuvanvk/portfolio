@@ -1,18 +1,18 @@
 
 import { Badge } from "./badge";
-import { React } from "../svgs/react";
-import { NextJS } from "../svgs/nextjs";
-import { TailwindCSS } from "../svgs/tailwindcss";
-import { TypeScript } from "../svgs/typesscript";
-import { Prisma } from "../svgs/prisma";
-import { Postgres } from "../svgs/postgres";
-import { AWS } from "../svgs/aws";
-import { Express } from "../svgs/express";
-import { NodeJs } from "../svgs/nodejs";
-import { Mongo } from "../svgs/mongo";
-import { Git } from "../svgs/git";
-import { Docker } from "../svgs/docker";
-import { Hono } from "../svgs/hono";
+import { React } from "../ui/icons"; 
+import { NextJS } from "../ui/icons";
+import { TailwindCSS } from "../ui/icons";
+import { TypeScript } from "../ui/icons";
+import { Prisma } from "../ui/icons";
+import { Postgres } from "../ui/icons";
+import { AWS } from "../ui/icons";
+import { Express } from "../ui/icons";
+import { NodeJs } from "../ui/icons";
+import { Mongo } from "../ui/icons";
+import { Git } from "../ui/icons";
+import { Docker } from "../ui/icons";
+import { Hono } from "../ui/icons";
 
 export const Skills = () => {
   const skills = [
