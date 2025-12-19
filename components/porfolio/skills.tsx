@@ -69,11 +69,12 @@ export const Skills = () => {
       title: "git",
     },
   ];
-
+  
   return (
     <div className="mb-16">
-      <div className="font-instrument-serif text-xl my-5">Technologies known</div>  
-      <div className=" flex flex-wrap gap-2">
+      <div className="font-sans text-lg my-5 underline decoration-dotted tracking-tighter"></div>  
+      <div className="flex flex-wrap gap-2">
+        <span className="font-instrument-serif text-xl">I build using</span>
       {skills.map((s, idx) => (
         <Badge key={idx} className="my-0 mx-0">
           <s.icon />

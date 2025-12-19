@@ -44,7 +44,7 @@ export default function RootLayout({
   return (
     <html lang="en" suppressHydrationWarning>
       <body
-        className={` ${geistMono.variable} ${instrumentSerif.variable} ${bricol.variable} antialiased selection:bg-purple-500 selection:text-white`}
+        className={` ${geistMono.variable} ${instrumentSerif.variable} ${bricol.variable} antialiased dark:bg-[#080808] selection:bg-purple-500 selection:text-white`}
       >
         <ThemeProvider
           attribute="class"
