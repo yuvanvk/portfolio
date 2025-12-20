@@ -24,13 +24,13 @@ export const MusicPlayer = () => {
 
   const handlePlay = () => {
     if (isPlaying === "default") {
-      setIsPlaying("play")
+      setIsPlaying("play");
       audioRef.current?.play();
     } else if (isPlaying === "play") {
-      setIsPlaying("pause")
+      setIsPlaying("pause");
       audioRef.current?.pause();
     } else if (isPlaying === "pause") {
-      setIsPlaying("play")
+      setIsPlaying("play");
       audioRef.current?.play();
     }
   };
@@ -48,8 +48,11 @@ export const MusicPlayer = () => {
               src={track.image}
               fill
               alt="music-image"
-              className={`${isPlaying === "play" && "animate-spin"} ${isPlaying === "resume" && ""}`}
-              style={{ animationDuration: "4s", animationPlayState: isPlaying === "play" ? "running" : "paused" }}
+              className={"animate-spin"}
+              style={{
+                animationDuration: "4s",
+                animationPlayState: isPlaying === "play" ? "running" : "paused",
+              }}
             />
           </div>
           <div className="flex flex-col">
