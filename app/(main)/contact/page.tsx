@@ -27,15 +27,15 @@ export default function ContactPage() {
     {
       id: 2,
       type: "X",
-      label: "@yuvan",
-      href: "https://x.com/abhi_vignesh",
+      label: "@yuvanvk",
+      href: "https://x.com/yuvanvk",
       playSound,
     },
     {
       id: 3,
       type: "Instagram",
-      label: "@yuvanvk",
-      href: "https://instagram.com/abhi_vignesh",
+      label: "@yuvanv.k",
+      href: "https://instagram.com/yuvanv.k",
       playSound,
     },
     {
