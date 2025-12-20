@@ -1,9 +1,10 @@
 "use client";
 
-import { useEffect, useState } from "react";
+import { useContext, useEffect, useState } from "react";
 import { useRef } from "react";
-import { AnimatePresence, motion } from "motion/react";
 import { useTheme } from "next-themes";
+import { AnimatePresence, motion } from "motion/react";
+import { LabelDisplayContext } from "@/context/LabelDisplayContext";
 
 export const CommandToobar = () => {
   const [open, setOpen] = useState(false);
@@ -91,9 +92,12 @@ export const Setting = ({
   open: boolean;
   setOpen: (val: false) => void;
 }) => {
+  
   const audioRef = useRef<HTMLAudioElement | null>(null);
   const {resolvedTheme, setTheme} = useTheme();
-
+  const { showLabels, setShowLabels} = useContext(LabelDisplayContext);
+  console.log(showLabels);
+  
   const playAudio = () => {
     if (!audioRef.current) {
       audioRef.current = new Audio("/audio/tap_05.wav");
@@ -127,6 +131,12 @@ export const Setting = ({
               className="fixed w-[360px] sm:min-w-sm px-2 py-3 rounded-2xl bg-neutral-100 dark:bg-neutral-900 bottom-4 z-30 left-1/2 -translate-x-1/2 flex flex-col gap-y-2"
             >
               <div
+                onClick={() => {
+                  setShowLabels((prev: boolean) => {
+                    console.log("after", !prev);
+                    return !prev;
+                  });
+                }}
                 onMouseEnter={playAudio}
                 className="flex items-center gap-x-2 px-3 py-1 hover:bg-white dark:hover:bg-neutral-800 rounded-lg cursor-pointer"
               >
@@ -135,13 +145,12 @@ export const Setting = ({
                 </div>
                 <div className="flex-1 w-full h-px bg-gray-300  dark:bg-neutral-600" />
                 <div className="font-sans tracking-tighter text-sm text-neutral-400 dark:text-neutral-500">
-                  true
+                  {showLabels ? "true" : "false"}
                 </div>
               </div>
               <div
                 onClick={() => {
                   setTheme(resolvedTheme === "light" ? "dark": "light")
-                  
                 }}
                 onMouseEnter={playAudio}
                 className="flex items-center gap-x-2 px-3 py-1 hover:bg-white dark:hover:bg-neutral-800 rounded-lg cursor-pointer"

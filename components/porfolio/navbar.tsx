@@ -1,14 +1,17 @@
 "use client";
 
+import { LabelDisplayContext } from "@/context/LabelDisplayContext";
 import { cn } from "@/lib/utils";
 import { usePathname, useRouter } from "next/navigation";
-import { useEffect, useRef } from "react";
+import { useContext, useEffect, useRef } from "react";
 
 export const Navbar = () => {
+  const { showLabels } = useContext(LabelDisplayContext);
+
   const audioRef = useRef<HTMLAudioElement | null>(null);
   const pathName = usePathname();
   const router = useRouter();
-
+  
   const playSound = () => {
     if (!audioRef.current) {
       audioRef.current = new Audio("/audio/tap_01.wav");
@@ -99,7 +102,7 @@ export const Navbar = () => {
             >
               {p.name}
             </span>
-            <span
+            {showLabels && (<span
               className={cn(
                 `border ${p.route === pathName
                   ? "border-neutral-900 dark:border-white"
@@ -109,7 +112,7 @@ export const Navbar = () => {
               )}
             >
               {p.character}
-            </span>
+            </span>)}
           </div>
         ))}
 

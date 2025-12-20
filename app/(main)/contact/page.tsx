@@ -54,13 +54,13 @@ export default function ContactPage() {
         transition={{ duration: 0.3 }}
         className="pt-20"
       >
-        <div className="flex items-center relative gap-x-2 px-2">
+        <div className="flex items-center relative max-w-sm md:max-w-lg lg:max-w-full gap-x-2 px-2 mx-auto">
           <Asterisk className="hidden md:block absolute  md:-top-1 md:-left-4 text-purple-500" />
-          <p className="font-instrument-serif text-2xl md:text-3xl xl:text-5xl">
+          <p className="font-instrument-serif  text-3xl lg:text-4xl xl:text-5xl">
             You can contact me through{" "}
           </p>
           <div className="h-px bg-neutral-700 flex-1" />
-          <div className="text-2xl md:text-3xl xl:text-5xl font-instrument-serif">
+          <div className="text-3xl lg:text-4xl xl:text-5xl font-instrument-serif">
             5
           </div>
         </div>

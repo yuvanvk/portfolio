@@ -7,6 +7,7 @@ import { Toaster } from "@/components/ui/sonner"
 import "./globals.css";
 import { Navbar } from "@/components/porfolio/navbar";
 import { CommandToobar } from "@/components/porfolio/command-toolbar";
+import { LabelDisplayProvider } from "@/context/LabelDisplayProvider";
 
 
 
@@ -54,11 +55,13 @@ export default function RootLayout({
           enableSystem
           disableTransitionOnChange
         >
-          <Toaster />
-          {children}
-          <Navbar />
-          <CommandToobar />
-         <Analytics />
+          <LabelDisplayProvider>
+            <Toaster />
+            {children}
+            <Navbar />
+            <CommandToobar />
+            <Analytics />
+          </LabelDisplayProvider>
         </ThemeProvider>
       </body>
     </html>

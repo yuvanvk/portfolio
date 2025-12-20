@@ -5,9 +5,8 @@ import { Container } from "@/components/ui/container";
 
 export default function Home() {
   return (
-  
       <Container>
-        <div className="pt-10">
+        <div className="pt-10 px-2 md:px-0">
           <HeroSection />
           <Skills />
           <MusicPlayer />

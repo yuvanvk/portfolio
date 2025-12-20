@@ -23,10 +23,10 @@ export default function ProjectsPage() {
             animate={{ opacity: 1, filter: "blur(0px)" }}
             transition={{ duration: 0.3 }}
             className="pt-20">
-               <div className="flex items-center gap-x-2 max-w-lg mx-auto">
+               <div className="flex items-center gap-x-2 max-w-sm md:max-w-lg mx-auto">
                     <div className="text-center font-instrument-serif text-5xl">Projects</div>
-                    <div className="h-px bg-neutral-700 flex-1"/>
-                    <div className="text-5xl font-instrument-serif">{POW.length}</div>
+                    <div className="h-px bg-neutral-300 dark:bg-neutral-700 flex-1"/>
+                    <div className="text-5xl text-neutral-800 dark:text-neutral-300 font-instrument-serif">{POW.length}</div>
                 </div> 
 
                 <div className="flex flex-col gap-y-2 pt-28 pb-5">
