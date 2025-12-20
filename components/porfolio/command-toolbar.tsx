@@ -27,8 +27,8 @@ export const CommandToobar = () => {
 
   return (
     <>
-      <div className="flex items-center gap-x-1 p-1.5 bg-neutral-900 w-fit rounded-xl fixed bottom-4 right-4">
-        <button className="cursor-pointer flex items-center justify-center size-[23px] hover:bg-neutral-800 p-1 rounded-full">
+      <div className="flex items-center gap-x-1 p-1.5 bg-neutral-100 dark:bg-neutral-900 w-fit rounded-xl fixed bottom-4 right-4">
+        <button className="cursor-pointer flex items-center justify-center size-[23px] hover:bg-neutral-200 dark:hover:bg-neutral-800 p-1 rounded-full">
           <svg
             xmlns="http://www.w3.org/2000/svg"
             width="24"
@@ -47,7 +47,7 @@ export const CommandToobar = () => {
             <path d="M19.364 18.364a9 9 0 0 0 0-12.728"></path>
           </svg>
         </button>
-        <button onClick={() => setOpen(c => !c)} className="cursor-pointer flex items-center justify-center size-[23px] hover:bg-neutral-800 p-1 rounded-full active:scale-120 transition-all">
+        <button onClick={() => setOpen(c => !c)} className="cursor-pointer flex items-center justify-center size-[23px] hover:bg-neutral-200 dark:hover:bg-neutral-800 p-1 rounded-full active:scale-120 transition-all">
           <svg
             xmlns="http://www.w3.org/2000/svg"
             width="24"
@@ -123,17 +123,17 @@ export const Setting = ({
               exit={{
                 y: 500,
               }}
-              className="fixed min-w-sm px-2 py-3 rounded-2xl bg-neutral-900 bottom-4 z-30 left-1/2 -translate-x-1/2 flex flex-col gap-y-2"
+              className="fixed min-w-sm px-2 py-3 rounded-2xl bg-neutral-100 dark:bg-neutral-900 bottom-4 z-30 left-1/2 -translate-x-1/2 flex flex-col gap-y-2"
             >
               <div
                 onMouseEnter={playAudio}
-                className="flex items-center gap-x-2 px-3 py-1 hover:bg-neutral-800 rounded-lg cursor-pointer"
+                className="flex items-center gap-x-2 px-3 py-1 hover:bg-white dark:hover:bg-neutral-800 rounded-lg cursor-pointer"
               >
                 <div className="uppercase font-instrument-serif">
                   show labels
                 </div>
-                <div className="flex-1 w-full h-px bg-neutral-600" />
-                <div className="font-sans tracking-tighter text-sm text-neutral-500">
+                <div className="flex-1 w-full h-px bg-gray-300  dark:bg-neutral-600" />
+                <div className="font-sans tracking-tighter text-sm text-neutral-400 dark:text-neutral-500">
                   true
                 </div>
               </div>
@@ -143,34 +143,34 @@ export const Setting = ({
                   
                 }}
                 onMouseEnter={playAudio}
-                className="flex items-center gap-x-2 px-3 py-1 hover:bg-neutral-800 rounded-lg cursor-pointer"
+                className="flex items-center gap-x-2 px-3 py-1 hover:bg-white dark:hover:bg-neutral-800 rounded-lg cursor-pointer"
               >
                 <div className="uppercase font-instrument-serif">THEME</div>
-                <div className="flex-1 w-full h-px bg-neutral-600" />
-                <div className="font-sans tracking-tighter text-sm text-neutral-500">
+                <div className="flex-1 w-full h-px bg-gray-300  dark:bg-neutral-600" />
+                <div className="font-sans tracking-tighter text-sm  text-neutral-400 dark:text-neutral-500">
                   {resolvedTheme}
                 </div>
               </div>
               <div
                 onMouseEnter={playAudio}
-                className="flex items-center gap-x-2 px-3 py-1 hover:bg-neutral-800 rounded-lg cursor-pointer"
+                className="flex items-center gap-x-2 px-3 py-1 hover:bg-white dark:hover:bg-neutral-800 rounded-lg cursor-pointer"
               >
                 <div className="uppercase font-instrument-serif">
                   SYSTEM THEME
                 </div>
-                <div className="flex-1 w-full h-px bg-neutral-600" />
-                <div className="font-sans tracking-tighter text-sm text-neutral-500">
+                <div className="flex-1 w-full h-px bg-gray-300  dark:bg-neutral-600" />
+                <div className="font-sans tracking-tighter text-sm text-neutral-400 dark:text-neutral-500">
                   off
                 </div>
               </div>
 
               <div
                 onMouseEnter={playAudio}
-                className="flex items-center gap-x-2 px-3 py-1 hover:bg-neutral-800 rounded-lg cursor-pointer"
+                className="flex items-center gap-x-2 px-3 py-1 hover:bg-white  dark:hover:bg-neutral-800 rounded-lg cursor-pointer"
               >
                 <div className="uppercase font-instrument-serif">SOUND</div>
-                <div className="flex-1 w-full h-px bg-neutral-600" />
-                <div className="font-sans tracking-tighter text-sm text-neutral-500">
+                <div className="flex-1 w-full h-px bg-gray-300  dark:bg-neutral-600" />
+                <div className="font-sans tracking-tighter text-sm text-neutral-400 dark:text-neutral-500">
                   enabled
                 </div>
               </div>

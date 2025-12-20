@@ -87,12 +87,12 @@ export const Navbar = () => {
             onMouseEnter={playSound}
             className={cn(
               `flex items-center gap-x-1`,
-              "hover:bg-[#0E0E0E] p-2 rounded-lg cursor-pointer group"
+              "hover:bg-neutral-100 dark:hover:bg-[#0E0E0E] p-2 rounded-lg cursor-pointer group"
             )}
           >
             <span
               className={cn(
-                `${p.route === pathName ? "text-white" : "text-neutral-700 group-hover:text-neutral-500"}`,
+                `${p.route === pathName ? "text-neutral-800 dark:text-white" : "text-neutral-400 dark:text-neutral-700 group-hover:text-neutral-500"}`,
                 "text-sm capitalize"
               )}
             >
@@ -101,8 +101,8 @@ export const Navbar = () => {
             <span
               className={cn(
                 `border ${p.route === pathName
-                  ? "border-white"
-                  : "border-neutral-700 text-neutral-700 group-hover:text-neutral-500 group-hover:border-neutral-500"
+                  ? "border-neutral-900 dark:border-white"
+                  : "border-neutral-400 text-neutral-400 dark:border-neutral-700 dark:text-neutral-700 group-hover:text-neutral-500 group-hover:border-neutral-500"
                 }`,
                 "size-4 hidden  items-center justify-center px-1 text-xs md:flex rounded-sm uppercase"
               )}
@@ -112,7 +112,7 @@ export const Navbar = () => {
           </div>
         ))}
 
-        <div className="rounded-full flex items-center justify-between gap-x-2 tracking-tighter text-xs font-mono bg-neutral-900 border px-3 py-1">
+        <div className="rounded-full flex items-center justify-between gap-x-2 tracking-tighter text-xs font-mono text-white bg-neutral-900 border px-3 py-1">
           <div className="size-2 bg-lime-500 rounded-full animate-pulse" />
           <div>13:11</div>
           <div>GMT+5: 30</div>
