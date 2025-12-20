@@ -108,10 +108,11 @@ export const Setting = ({
         {open && (
           <motion.div>
             <motion.div
+              initial={{ opacity: 0, filter: "blur(0px)"}}
               animate={{ opacity: 1 ,filter: "blur(10px)" }}
               exit={{ opacity: 0 }}
               onClick={() => setOpen(false)}
-              className="fixed backdrop-blur-sm inset-0 z-20 "
+              className="fixed backdrop-blur-[10px] inset-0 z-20"
             />
             <motion.div
               initial={{ y: 500 }}
@@ -123,7 +124,7 @@ export const Setting = ({
               exit={{
                 y: 500,
               }}
-              className="fixed min-w-sm px-2 py-3 rounded-2xl bg-neutral-100 dark:bg-neutral-900 bottom-4 z-30 left-1/2 -translate-x-1/2 flex flex-col gap-y-2"
+              className="fixed w-[360px] sm:min-w-sm px-2 py-3 rounded-2xl bg-neutral-100 dark:bg-neutral-900 bottom-4 z-30 left-1/2 -translate-x-1/2 flex flex-col gap-y-2"
             >
               <div
                 onMouseEnter={playAudio}

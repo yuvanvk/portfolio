@@ -5,7 +5,7 @@ import { Container } from "@/components/ui/container";
 
 export default function Home() {
   return (
-    <>
+  
       <Container>
         <div className="pt-10">
           <HeroSection />
@@ -13,6 +13,6 @@ export default function Home() {
           <MusicPlayer />
         </div>
       </Container>
-    </>
+  
   );
 }
