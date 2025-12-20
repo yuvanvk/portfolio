@@ -3,6 +3,7 @@
 import { useEffect, useState } from "react";
 import { useRef } from "react";
 import { AnimatePresence, motion } from "motion/react";
+import { useTheme } from "next-themes";
 
 export const CommandToobar = () => {
   const [open, setOpen] = useState(false);
@@ -26,8 +27,8 @@ export const CommandToobar = () => {
 
   return (
     <>
-      <div className="flex items-center gap-x-2 px-2 py-2 bg-neutral-900 w-fit rounded-xl fixed bottom-5 right-5">
-        <button className="cursor-pointer flex items-center justify-center size-[17px]">
+      <div className="flex items-center gap-x-1 p-1.5 bg-neutral-900 w-fit rounded-xl fixed bottom-4 right-4">
+        <button className="cursor-pointer flex items-center justify-center size-[23px] hover:bg-neutral-800 p-1 rounded-full">
           <svg
             xmlns="http://www.w3.org/2000/svg"
             width="24"
@@ -46,7 +47,7 @@ export const CommandToobar = () => {
             <path d="M19.364 18.364a9 9 0 0 0 0-12.728"></path>
           </svg>
         </button>
-        <button className="cursor-pointer flex items-center justify-center size-[17px]">
+        <button onClick={() => setOpen(c => !c)} className="cursor-pointer flex items-center justify-center size-[23px] hover:bg-neutral-800 p-1 rounded-full active:scale-120 transition-all">
           <svg
             xmlns="http://www.w3.org/2000/svg"
             width="24"
@@ -91,6 +92,7 @@ export const Setting = ({
   setOpen: (val: false) => void;
 }) => {
   const audioRef = useRef<HTMLAudioElement | null>(null);
+  const {resolvedTheme, setTheme} = useTheme();
 
   const playAudio = () => {
     if (!audioRef.current) {
@@ -109,7 +111,7 @@ export const Setting = ({
               animate={{ opacity: 1 ,filter: "blur(10px)" }}
               exit={{ opacity: 0 }}
               onClick={() => setOpen(false)}
-              className="fixed backdrop-blur-sm inset-0 z-20"
+              className="fixed backdrop-blur-sm inset-0 z-20 "
             />
             <motion.div
               initial={{ y: 500 }}
@@ -121,7 +123,7 @@ export const Setting = ({
               exit={{
                 y: 500,
               }}
-              className="fixed min-w-sm px-2 py-3 rounded-2xl bg-neutral-900 bottom-4 z-20 left-1/2 -translate-x-1/2 flex flex-col gap-y-2"
+              className="fixed min-w-sm px-2 py-3 rounded-2xl bg-neutral-900 bottom-4 z-30 left-1/2 -translate-x-1/2 flex flex-col gap-y-2"
             >
               <div
                 onMouseEnter={playAudio}
@@ -136,13 +138,17 @@ export const Setting = ({
                 </div>
               </div>
               <div
+                onClick={() => {
+                  setTheme(resolvedTheme === "light" ? "dark": "light")
+                  
+                }}
                 onMouseEnter={playAudio}
                 className="flex items-center gap-x-2 px-3 py-1 hover:bg-neutral-800 rounded-lg cursor-pointer"
               >
                 <div className="uppercase font-instrument-serif">THEME</div>
                 <div className="flex-1 w-full h-px bg-neutral-600" />
                 <div className="font-sans tracking-tighter text-sm text-neutral-500">
-                  dark
+                  {resolvedTheme}
                 </div>
               </div>
               <div
