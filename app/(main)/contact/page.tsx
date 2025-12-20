@@ -45,14 +45,14 @@ export default function ContactPage() {
         }
     ]
     return <Container>
-        <div className="pt-20">
-            <div className="flex items-center relative gap-x-2"> 
-                <Asterisk size={30} className="absolute -top-1 -left-7 text-lime-500"/>
-                <p className="font-instrument-serif text-5xl text-center">You can contact me through</p>
+        <div className="pt-20 ">
+            <div className="flex items-center relative gap-x-2 px-2"> 
+                <Asterisk  className="hidden md:block absolute  md:-top-1 md:-left-4 text-purple-500"/>
+                <p className="font-instrument-serif text-2xl md:text-3xl xl:text-5xl">You can reach me out through </p>
                 <div className="h-px bg-neutral-700 flex-1" />
-                <div className="text-5xl font-instrument-serif">5</div>
+                <div className="text-2xl md:text-3xl xl:text-5xl font-instrument-serif">5</div>
             </div>
-
+            
             <div className="py-20 flex flex-col items-center w-full gap-y-2">
                 {contactInfo.map((contact) => (
                     <ContactCard username={contact.label} href={contact.href} key={contact.id} handleName={contact.type} playSound={contact.playSound}/>

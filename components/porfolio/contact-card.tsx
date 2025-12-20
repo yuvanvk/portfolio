@@ -1,5 +1,5 @@
-import { CircleArrowOutUpRight, Copy } from "lucide-react";
 import Link from "next/link";
+import { CircleArrowOutUpRight, Copy } from "lucide-react";
 
 export const ContactCard = ({
   username,
@@ -16,7 +16,7 @@ export const ContactCard = ({
 
   return (
     <Link href={href} target="_blank" className="w-full" onMouseEnter={playSound}>
-      <div className="flex items-center gap-x-2 max-w-2xl px-2 py-2 rounded-xl hover:bg-neutral-900 tracking-tight w-full cursor-pointer">
+      <div className="flex items-center gap-x-2 max-w-2xl mx-auto px-2 py-2 rounded-xl hover:bg-neutral-900 tracking-tight w-full cursor-pointer">
         <div className="group px-2 py-2 hover:bg-neutral-800  rounded-lg">
           <Copy
             size={15}
