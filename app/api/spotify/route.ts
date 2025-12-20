@@ -2,7 +2,7 @@ import { getAccessToken } from "@/lib/spotify";
 import { NextRequest, NextResponse } from "next/server";
 import axios from "axios";
 
-export async function GET(req: NextRequest) {
+export async function GET() {
   try {
     const { access_token } = await getAccessToken();
 
@@ -23,11 +23,11 @@ export async function GET(req: NextRequest) {
 
   return NextResponse.json({
     track: {
-      id: track.id,
-      name: track.name,
-      artists: track.artists.map((a: any) => a.name).join(", "),
-      image: track.album.images[0]?.url,
-      audio: audioResponseSavaan.data.data.results[0].downloadUrl[4].url,
+      id: track.id as string,
+      name: track.name as string,
+      artists: (track.artists as { name: string }[]).map(a => a.name).join(", "),
+      image: track.album.images[0]?.url as string,
+      audio: audioResponseSavaan.data.data.results[0].downloadUrl[4].url as string,
 
     },
   });

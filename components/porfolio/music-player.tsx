@@ -6,11 +6,19 @@ import { useEffect, useRef, useState } from "react";
 import { Spotify } from "../ui/icons";
 import { MusicToggleButton } from "../ui/skiper-ui/skiper25";
 
+type Track = {
+  id: string;
+  name: string;
+  artists: string;
+  image: string;
+  audio: string;
+};
+
 export const MusicPlayer = () => {
-  const [track, setTrack] = useState<any>(null);
-  const [isPlaying, setIsPlaying] = useState<
-    "play" | "pause" | "resume" | "default"
-  >("default");
+
+  const [track, setTrack] = useState<Track | null>(null);
+
+  const [isPlaying, setIsPlaying] = useState<"play" | "pause" | "resume" | "default">("default");
   const audioRef = useRef<HTMLAudioElement | null>(null);
 
   useEffect(() => {
