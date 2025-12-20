@@ -296,8 +296,8 @@ const TanStack = (props: SVGProps<SVGSVGElement>) => (
         y1="0%"
         y2="100%"
       >
-        <stop offset="0%" stop-color="#FFA400" />
-        <stop offset="100%" stop-color="#FF5E00" />
+        <stop offset="0%" stopColor="#FFA400" />
+        <stop offset="100%" stopColor="#FF5E00" />
       </linearGradient>
       <linearGradient
         id="tanstack__t"
@@ -306,8 +306,8 @@ const TanStack = (props: SVGProps<SVGSVGElement>) => (
         y1="0%"
         y2="100%"
       >
-        <stop offset="0%" stop-color="#FFA400" />
-        <stop offset="100%" stop-color="#FF5E00" />
+        <stop offset="0%" stopColor="#FFA400" />
+        <stop offset="100%" stopColor="#FF5E00" />
       </linearGradient>
       <linearGradient
         id="tanstack__u"
@@ -316,8 +316,8 @@ const TanStack = (props: SVGProps<SVGSVGElement>) => (
         y1="0%"
         y2="100%"
       >
-        <stop offset="0%" stop-color="#FFA400" />
-        <stop offset="100%" stop-color="#FF5E00" />
+        <stop offset="0%" stopColor="#FFA400" />
+        <stop offset="100%" stopColor="#FF5E00" />
       </linearGradient>
       <circle id="tanstack__a" cx="308.5" cy="308.5" r="308.5" />
       <circle id="tanstack__v" cx="307.5" cy="308.5" r="316.5" />
