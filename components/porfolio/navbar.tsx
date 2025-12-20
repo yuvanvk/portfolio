@@ -50,6 +50,7 @@ export const Navbar = () => {
       route: "/agency",
     },
   ];
+
   useEffect(() => {
     const handleKeyPress = (e: KeyboardEvent) => {
       
@@ -79,7 +80,7 @@ export const Navbar = () => {
 
   return (
     <div className="fixed w-full z-10 top-8">
-      <div className="flex items-center justify-center gap-x-4 backdrop-blur-md tracking-tighter max-w-3xl mx-auto">
+      <div className="flex items-center justify-center gap-x-2 xl:gap-x-4 backdrop-blur-md tracking-tighter w-full md:max-w-xl xl:max-w-3xl mx-auto">
         {pages.map((p) => (
           <div
           onClick={() => router.push(p.route)}
@@ -112,7 +113,7 @@ export const Navbar = () => {
           </div>
         ))}
 
-        <div className="rounded-full flex items-center justify-between gap-x-2 tracking-tighter text-xs font-mono text-white bg-neutral-900 border px-3 py-1">
+        <div className="hidden rounded-full md:flex items-center justify-between gap-x-2 tracking-tighter text-xs font-mono text-white bg-neutral-900 border px-3 py-1">
           <div className="size-2 bg-lime-500 rounded-full animate-pulse" />
           <div>13:11</div>
           <div>GMT+5: 30</div>

@@ -41,9 +41,10 @@ export const MusicPlayer = () => {
 
   return (
     <>
-      <div className="w-full px-4 py-3 bg-neutral-900 rounded-xl flex justify-between items-center relative border border-neutral-800">
+    <div className="font-instrument-serif text-lg mt-10 md:mt-24">Hum for some time...</div>
+      <div className="w-full px-4 py-3 bg-neutral-900 rounded-xl flex justify-between items-center relative border border-neutral-800 ">
         <div className="flex gap-x-2.5 items-center">
-          <div className="size-12 relative rounded-full overflow-hidden">
+          <div className="size-12 relative rounded-full overflow-hidden ">
             <Image
               src={track.image}
               fill
@@ -63,17 +64,23 @@ export const MusicPlayer = () => {
               by {track.artists}
             </div>
           </div>
+          <audio
+            className=""
+            ref={audioRef}
+            src={track.audio}
+            loop
+            // controls
+          ></audio>
         </div>
         <div onClick={handlePlay}>
           <MusicToggleButton />
         </div>
 
-        <div className="absolute -top-4 -right-3 flex items-center gap-x-1 bg-neutral-800 px-1 py-1 rounded-sm border border-neutral-700">
+        <div className="absolute -top-4 -right-1 md:-right-3 flex items-center gap-x-1 bg-neutral-800 px-1 py-1 rounded-sm border border-neutral-700">
           <Spotify />
           <div className="text-[10px] font-sans">Last played</div>
         </div>
       </div>
-      <audio ref={audioRef} src={track.audio} loop></audio>
     </>
   );
 };
