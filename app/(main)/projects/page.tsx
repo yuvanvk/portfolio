@@ -3,7 +3,7 @@
 import { ProjectCard } from "@/components/cards/project-card";
 import { Container } from "@/components/wrapper/container";
 import { POW } from "@/lib/projects";
-import { useContext, useRef } from "react";
+import { useContext } from "react";
 
 import { motion } from "motion/react";
 import { SoundContext } from "@/context/Sound/SoundContext";

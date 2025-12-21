@@ -4,7 +4,7 @@ import { LabelDisplayContext } from "@/context/LabelDisplay/LabelDisplayContext"
 import { SoundContext } from "@/context/Sound/SoundContext";
 import { cn } from "@/lib/utils";
 import { usePathname, useRouter } from "next/navigation";
-import { useContext, useEffect, useRef, useState } from "react";
+import { useContext, useEffect, useState } from "react";
 
 export const Navbar = () => {
 
@@ -12,12 +12,9 @@ export const Navbar = () => {
   const { showLabels } = useContext(LabelDisplayContext);
   const { playSound } = useContext(SoundContext);
 
-  const audioRef = useRef<HTMLAudioElement | null>(null);
   const pathName = usePathname();
   const router = useRouter();
   
-  
-
   const pages = [
     {
       id: 1,

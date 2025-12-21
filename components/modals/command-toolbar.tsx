@@ -1,7 +1,6 @@
 "use client";
 
 import { useContext, useEffect, useState } from "react";
-import { useRef } from "react";
 import { useTheme } from "next-themes";
 import { AnimatePresence, motion } from "motion/react";
 import { LabelDisplayContext } from "@/context/LabelDisplay/LabelDisplayContext";
@@ -94,7 +93,7 @@ export const Setting = ({
   setOpen: (val: false) => void;
 }) => {
   
-  const audioRef = useRef<HTMLAudioElement | null>(null);
+
   const {resolvedTheme, setTheme, theme } = useTheme();
   const { showLabels, setShowLabels} = useContext(LabelDisplayContext);
   const { enabled, toggleSound, playSound } = useContext(SoundContext);
