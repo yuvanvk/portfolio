@@ -1,5 +1,5 @@
 
-import { Badge } from "./badge";
+import { Badge } from "../ui/badge";
 import { Kubernetes, React, Redis, TanStack, tRPC } from "../ui/icons"; 
 import { NextJS } from "../ui/icons";
 import { TailwindCSS } from "../ui/icons";

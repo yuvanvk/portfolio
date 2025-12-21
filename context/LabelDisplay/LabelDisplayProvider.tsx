@@ -1,6 +1,6 @@
 "use client";
 
-import { LabelDisplayContext } from "@/context/LabelDisplayContext";
+import { LabelDisplayContext } from "@/context/LabelDisplay/LabelDisplayContext";
 import { useState } from "react";
 
 export const LabelDisplayProvider = ({

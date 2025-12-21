@@ -1,6 +1,6 @@
 "use client";
 
-import { Container } from "@/components/ui/container";
+import { Container } from "@/components/wrapper/container";
 import { motion } from "motion/react"
 export default function AboutPage() {
   return (

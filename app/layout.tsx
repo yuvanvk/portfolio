@@ -1,34 +1,30 @@
 import type { Metadata } from "next";
-import {  Bricolage_Grotesque, Instrument_Serif } from "next/font/google";
-import {  Geist } from "next/font/google";
-import { ThemeProvider } from "@/components/ui/theme-provider";
-import { Analytics } from "@vercel/analytics/next"
-import { Toaster } from "@/components/ui/sonner"
+import { Bricolage_Grotesque, Instrument_Serif } from "next/font/google";
+import { Geist } from "next/font/google";
+import { ThemeProvider } from "@/components/wrapper/theme-provider";
+import { Analytics } from "@vercel/analytics/next";
+import { Toaster } from "@/components/ui/sonner";
 import "./globals.css";
-import { Navbar } from "@/components/porfolio/navbar";
-import { CommandToobar } from "@/components/porfolio/command-toolbar";
-import { LabelDisplayProvider } from "@/context/LabelDisplayProvider";
-
-
-
-
+import { Navbar } from "@/components/navigation/navbar";
+import { CommandToobar } from "@/components/modals/command-toolbar";
+import { LabelDisplayProvider } from "@/context/LabelDisplay/LabelDisplayProvider";
 
 const bricol = Bricolage_Grotesque({
   subsets: ["latin"],
   weight: ["200", "300", "400", "500", "600", "700", "800"],
-  variable: "--font-bricolage-grostesque"
-})
+  variable: "--font-bricolage-grostesque",
+});
 
 const instrumentSerif = Instrument_Serif({
   subsets: ["latin"],
   weight: ["400"],
-  variable: "--font-instrument-serif"
+  variable: "--font-instrument-serif",
 });
 
 const geistMono = Geist({
   subsets: ["latin"],
   weight: ["300", "400", "500", "700"],
-  variable: "--font-geist-mono", 
+  variable: "--font-geist-mono",
 });
 
 export const metadata: Metadata = {

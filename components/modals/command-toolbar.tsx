@@ -4,7 +4,7 @@ import { useContext, useEffect, useState } from "react";
 import { useRef } from "react";
 import { useTheme } from "next-themes";
 import { AnimatePresence, motion } from "motion/react";
-import { LabelDisplayContext } from "@/context/LabelDisplayContext";
+import { LabelDisplayContext } from "@/context/LabelDisplay/LabelDisplayContext";
 
 export const CommandToobar = () => {
   const [open, setOpen] = useState(false);

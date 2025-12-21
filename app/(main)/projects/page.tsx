@@ -1,8 +1,8 @@
 "use client";
 
-import { ProjectCard } from "@/components/porfolio/project-card";
-import { Container } from "@/components/ui/container";
-import { POW } from "@/lib/crafts";
+import { ProjectCard } from "@/components/cards/project-card";
+import { Container } from "@/components/wrapper/container";
+import { POW } from "@/lib/projects";
 import { useRef } from "react";
 
 import { motion } from "motion/react";

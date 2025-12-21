@@ -1,4 +1,4 @@
-![Portfolio](./public/portfolio.png)
+![Portfolio](./public/images/portfolio.png)
 
 # AbhiVignesh — Portfolio Website
 

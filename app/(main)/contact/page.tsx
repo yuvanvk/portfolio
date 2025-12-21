@@ -1,6 +1,6 @@
 "use client";
-import { ContactCard } from "@/components/porfolio/contact-card";
-import { Container } from "@/components/ui/container";
+import { ContactCard } from "@/components/cards/contact-card";
+import { Container } from "@/components/wrapper/container";
 import { Asterisk } from "lucide-react";
 import { useRef } from "react";
 
@@ -61,7 +61,7 @@ export default function ContactPage() {
           </p>
           <div className="h-px bg-neutral-700 flex-1" />
           <div className="text-3xl lg:text-4xl xl:text-5xl font-instrument-serif">
-            5
+            {contactInfo.length}
           </div>
         </div>
         <div className="text-center text-neutral-500 pt-30 pb-10 max-w-lg mx-auto">

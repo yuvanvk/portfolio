@@ -1,7 +1,7 @@
-import { HeroSection } from "@/components/porfolio/hero-section";
-import { MusicPlayer } from "@/components/porfolio/music-player";
-import { Skills } from "@/components/porfolio/skills";
-import { Container } from "@/components/ui/container";
+import { HeroSection } from "@/components/sections/hero";
+import { MusicPlayer } from "@/components/sections/music-player";
+import { Skills } from "@/components/sections/skills";
+import { Container } from "@/components/wrapper/container";
 
 export default function Home() {
   return (

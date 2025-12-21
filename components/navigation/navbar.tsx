@@ -1,6 +1,6 @@
 "use client";
 
-import { LabelDisplayContext } from "@/context/LabelDisplayContext";
+import { LabelDisplayContext } from "@/context/LabelDisplay/LabelDisplayContext";
 import { cn } from "@/lib/utils";
 import { usePathname, useRouter } from "next/navigation";
 import { useContext, useEffect, useRef } from "react";
@@ -83,7 +83,7 @@ export const Navbar = () => {
 
   return (
     <div className="fixed w-full z-10 top-8">
-      <div className="flex items-center justify-center gap-x-2 xl:gap-x-4 backdrop-blur-md tracking-tighter w-full md:max-w-xl xl:max-w-3xl mx-auto">
+      <div className="flex items-center justify-center gap-x-2 xl:gap-x-4 tracking-tighter w-full md:max-w-xl xl:max-w-3xl mx-auto">
         {pages.map((p) => (
           <div
           onClick={() => router.push(p.route)}
