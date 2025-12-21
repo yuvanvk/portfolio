@@ -3,9 +3,11 @@
 import { LabelDisplayContext } from "@/context/LabelDisplay/LabelDisplayContext";
 import { cn } from "@/lib/utils";
 import { usePathname, useRouter } from "next/navigation";
-import { useContext, useEffect, useRef } from "react";
+import { useContext, useEffect, useRef, useState } from "react";
 
 export const Navbar = () => {
+
+  const [time, setTime] = useState("");
   const { showLabels } = useContext(LabelDisplayContext);
 
   const audioRef = useRef<HTMLAudioElement | null>(null);
@@ -80,6 +82,21 @@ export const Navbar = () => {
     return () => window.removeEventListener("keydown", handleKeyPress)
   }, [router])
 
+  useEffect(() => {
+      const clock = () => {
+        const time = new Date();
+
+        const hours = time.getHours().toString().padStart(2, "0");
+        const minutes = time.getMinutes().toString().padStart(2, "0")
+
+
+        setTime(`${hours}:${minutes}`)
+      } 
+      clock()
+      const interval = setInterval(clock, 1000);
+
+      return () => clearInterval(interval)
+  }, [])
 
   return (
     <div className="fixed w-full z-10 top-8">
@@ -118,7 +135,7 @@ export const Navbar = () => {
 
         <div className="hidden rounded-full md:flex items-center justify-between gap-x-2 tracking-tighter text-xs font-mono text-white bg-neutral-900 border px-3 py-1">
           <div className="size-2 bg-lime-500 rounded-full animate-pulse" />
-          <div>13:11</div>
+          <div>{time}</div>
           <div>GMT+5: 30</div>
         </div>
       </div>

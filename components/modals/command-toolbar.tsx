@@ -133,7 +133,6 @@ export const Setting = ({
               <div
                 onClick={() => {
                   setShowLabels((prev: boolean) => {
-                    console.log("after", !prev);
                     return !prev;
                   });
                 }}
