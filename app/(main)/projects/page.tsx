@@ -3,20 +3,14 @@
 import { ProjectCard } from "@/components/cards/project-card";
 import { Container } from "@/components/wrapper/container";
 import { POW } from "@/lib/projects";
-import { useRef } from "react";
+import { useContext, useRef } from "react";
 
 import { motion } from "motion/react";
+import { SoundContext } from "@/context/Sound/SoundContext";
 
 export default function ProjectsPage() {
-    const audioRef = useRef<HTMLAudioElement | null>(null)
-    const playSound = () => {
-        if(!audioRef.current) {
-            audioRef.current = new Audio("/audio/tap_05.wav")
-        }
+    const { playSound } = useContext(SoundContext);
 
-        audioRef.current.currentTime = 0;
-        audioRef.current.play();
-    }
         return <Container>
             <motion.div
             initial={{ opacity: 0, filter: "blur(10px)" }}
@@ -31,7 +25,7 @@ export default function ProjectsPage() {
 
                 <div className="flex flex-col gap-y-2 pt-28 pb-5">
                     {POW.map((p) => (
-                        <ProjectCard key={p.github} name={p.title} description={p.description} time={p.year} link={p.deploy} playSound={playSound}/>
+                        <ProjectCard key={p.github} name={p.title} description={p.description} time={p.year} link={p.deploy} playSound={() => playSound("/audio/tap_05.wav")}/>
                     ))}
                 </div>
             </motion.div>

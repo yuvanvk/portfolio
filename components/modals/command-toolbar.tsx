@@ -5,6 +5,7 @@ import { useRef } from "react";
 import { useTheme } from "next-themes";
 import { AnimatePresence, motion } from "motion/react";
 import { LabelDisplayContext } from "@/context/LabelDisplay/LabelDisplayContext";
+import { SoundContext } from "@/context/Sound/SoundContext";
 
 export const CommandToobar = () => {
   const [open, setOpen] = useState(false);
@@ -94,17 +95,10 @@ export const Setting = ({
 }) => {
   
   const audioRef = useRef<HTMLAudioElement | null>(null);
-  const {resolvedTheme, setTheme} = useTheme();
+  const {resolvedTheme, setTheme, theme } = useTheme();
   const { showLabels, setShowLabels} = useContext(LabelDisplayContext);
-  console.log(showLabels);
-  
-  const playAudio = () => {
-    if (!audioRef.current) {
-      audioRef.current = new Audio("/audio/tap_05.wav");
-    }
-    audioRef.current.currentTime = 0;
-    audioRef.current.play();
-  };
+  const { enabled, toggleSound, playSound } = useContext(SoundContext);
+
 
   return (
     <>
@@ -136,7 +130,7 @@ export const Setting = ({
                     return !prev;
                   });
                 }}
-                onMouseEnter={playAudio}
+                onMouseEnter={() => playSound("/audio/tap_05.wav")}
                 className="flex items-center gap-x-2 px-3 py-1 hover:bg-white dark:hover:bg-neutral-800 rounded-lg cursor-pointer"
               >
                 <div className="uppercase font-instrument-serif">
@@ -151,7 +145,7 @@ export const Setting = ({
                 onClick={() => {
                   setTheme(resolvedTheme === "light" ? "dark": "light")
                 }}
-                onMouseEnter={playAudio}
+                onMouseEnter={() => playSound("/audio/tap_05.wav")}
                 className="flex items-center gap-x-2 px-3 py-1 hover:bg-white dark:hover:bg-neutral-800 rounded-lg cursor-pointer"
               >
                 <div className="uppercase font-instrument-serif">THEME</div>
@@ -161,7 +155,10 @@ export const Setting = ({
                 </div>
               </div>
               <div
-                onMouseEnter={playAudio}
+                onClick={() => {
+                  setTheme(theme === "system" ? "dark" : "system")
+                }}
+                onMouseEnter={() => playSound("/audio/tap_05.wav")}
                 className="flex items-center gap-x-2 px-3 py-1 hover:bg-white dark:hover:bg-neutral-800 rounded-lg cursor-pointer"
               >
                 <div className="uppercase font-instrument-serif">
@@ -169,18 +166,19 @@ export const Setting = ({
                 </div>
                 <div className="flex-1 w-full h-px bg-gray-300  dark:bg-neutral-600" />
                 <div className="font-sans tracking-tighter text-sm text-neutral-400 dark:text-neutral-500">
-                  off
+                  {theme === "system" ? "on" : "off"}
                 </div>
               </div>
 
               <div
-                onMouseEnter={playAudio}
+                onClick={toggleSound}
+                onMouseEnter={() => playSound("/audio/tap_05.wav")}
                 className="flex items-center gap-x-2 px-3 py-1 hover:bg-white  dark:hover:bg-neutral-800 rounded-lg cursor-pointer"
               >
                 <div className="uppercase font-instrument-serif">SOUND</div>
                 <div className="flex-1 w-full h-px bg-gray-300  dark:bg-neutral-600" />
                 <div className="font-sans tracking-tighter text-sm text-neutral-400 dark:text-neutral-500">
-                  enabled
+                  { enabled ? "enabled" : "disabled"}
                 </div>
               </div>
             </motion.div>

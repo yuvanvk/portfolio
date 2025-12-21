@@ -8,6 +8,7 @@ import "./globals.css";
 import { Navbar } from "@/components/navigation/navbar";
 import { CommandToobar } from "@/components/modals/command-toolbar";
 import { LabelDisplayProvider } from "@/context/LabelDisplay/LabelDisplayProvider";
+import { SoundProvider } from "@/context/Sound/SoundProvider";
 
 const bricol = Bricolage_Grotesque({
   subsets: ["latin"],
@@ -51,13 +52,15 @@ export default function RootLayout({
           enableSystem
           disableTransitionOnChange
         >
-          <LabelDisplayProvider>
-            <Toaster />
-            {children}
-            <Navbar />
-            <CommandToobar />
-            <Analytics />
-          </LabelDisplayProvider>
+          <SoundProvider>
+            <LabelDisplayProvider>
+              <Toaster />
+              {children}
+              <Navbar />
+              <CommandToobar />
+              <Analytics />
+            </LabelDisplayProvider>
+          </SoundProvider>
         </ThemeProvider>
       </body>
     </html>

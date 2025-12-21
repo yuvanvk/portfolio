@@ -1,49 +1,43 @@
 "use client";
 import { ContactCard } from "@/components/cards/contact-card";
 import { Container } from "@/components/wrapper/container";
+import { SoundContext } from "@/context/Sound/SoundContext";
 import { Asterisk } from "lucide-react";
-import { useRef } from "react";
+
 
 import { motion } from "motion/react";
+import { useContext } from "react";
 
 export default function ContactPage() {
-  const audioRef = useRef<HTMLAudioElement | null>(null);
-  const playSound = () => {
-    if (!audioRef.current) {
-      audioRef.current = new Audio("/audio/tap_05.wav");
-    }
-
-    audioRef.current.currentTime = 0;
-    audioRef.current.play();
-  };
+  const { playSound } = useContext(SoundContext);
   const contactInfo = [
     {
       id: 1,
       type: "Email",
       label: "abhivigneshofficial@gmail.com",
       href: "mailto:abhivigneshofficial@gmail.com",
-      playSound,
+      playSound: () => playSound("/audio/tap_05.wav"),
     },
     {
       id: 2,
       type: "X",
       label: "@yuvanvk",
       href: "https://x.com/yuvanvk",
-      playSound,
+      playSound: () => playSound("/audio/tap_05.wav"),
     },
     {
       id: 3,
       type: "Instagram",
       label: "@yuvanv.k",
       href: "https://instagram.com/yuvanv.k",
-      playSound,
+      playSound: () => playSound("/audio/tap_05.wav"),
     },
     {
       id: 4,
       type: "Github",
       label: "@yuvanvk",
       href: "https://github.com/yuvanvk",
-      playSound,
+      playSound: () => playSound("/audio/tap_05.wav"),
     },
   ];
   return (

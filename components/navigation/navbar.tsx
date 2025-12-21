@@ -1,6 +1,7 @@
 "use client";
 
 import { LabelDisplayContext } from "@/context/LabelDisplay/LabelDisplayContext";
+import { SoundContext } from "@/context/Sound/SoundContext";
 import { cn } from "@/lib/utils";
 import { usePathname, useRouter } from "next/navigation";
 import { useContext, useEffect, useRef, useState } from "react";
@@ -9,19 +10,13 @@ export const Navbar = () => {
 
   const [time, setTime] = useState("");
   const { showLabels } = useContext(LabelDisplayContext);
+  const { playSound } = useContext(SoundContext);
 
   const audioRef = useRef<HTMLAudioElement | null>(null);
   const pathName = usePathname();
   const router = useRouter();
   
-  const playSound = () => {
-    if (!audioRef.current) {
-      audioRef.current = new Audio("/audio/tap_01.wav");
-    }
-
-    audioRef.current.currentTime = 0;
-    audioRef.current.play();
-  };
+  
 
   const pages = [
     {
@@ -105,7 +100,7 @@ export const Navbar = () => {
           <div
           onClick={() => router.push(p.route)}
             key={p.id}
-            onMouseEnter={playSound}
+            onMouseEnter={() => playSound("/audio/tap_01.wav")}
             className={cn(
               `flex items-center gap-x-1`,
               "hover:bg-neutral-100 dark:hover:bg-[#0E0E0E] p-2 rounded-lg cursor-pointer group"
