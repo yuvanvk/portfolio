@@ -25,14 +25,15 @@ export async function GET() {
       {
         headers: {
           Authorization: `Bearer ${access_token}`,
+          "User-Agent": "Mozilla/5.0"
         },
       }
     );
 
     const track = res.data.items?.[0]?.track;
-    const audioResponseSavaan = await axios.get(
-      `https://saavn.sumit.co/api/search/songs?query=${track.name}&page=0&limit=10`
-    );
+    console.log(track.name);
+    
+    const audioResponseSavaan = await axios.get(`${process.env.JIO_SAVAAN_API}/api/search/songs?query=${track.name}&page=0&limit=10`);
 
     const finalTrack = {
       id: track.id as string,
