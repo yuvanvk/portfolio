@@ -56,7 +56,7 @@ export default function RootLayout({
             <LabelDisplayProvider>
               <Toaster />
               {children}
-              <Navbar />
+              {/* <Navbar /> */}
               <CommandToobar />
               <Analytics />
             </LabelDisplayProvider>

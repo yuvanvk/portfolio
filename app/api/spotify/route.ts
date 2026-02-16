@@ -31,7 +31,6 @@ export async function GET() {
     );
 
     const track = res.data.items?.[0]?.track;
-    console.log(track.name);
     
     const audioResponseSavaan = await axios.get(`${process.env.JIO_SAVAAN_API}/api/search/songs?query=${track.name}&page=0&limit=10`);
 
@@ -52,8 +51,8 @@ export async function GET() {
     });
 
 
-  } catch (error) {
-    console.log(error);
+  } catch (error: any) {
+    console.log(error.response);
     return NextResponse.json({
       message: "Failed to fetch",
       status: 500
