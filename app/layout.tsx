@@ -1,6 +1,6 @@
 import type { Metadata } from "next";
 import { Bricolage_Grotesque, Instrument_Serif } from "next/font/google";
-import { Geist } from "next/font/google";
+import { Geist, Geist_Mono } from "next/font/google";
 import { ThemeProvider } from "@/components/wrapper/theme-provider";
 import { Analytics } from "@vercel/analytics/next";
 import { Toaster } from "@/components/ui/sonner";
@@ -22,10 +22,10 @@ const instrumentSerif = Instrument_Serif({
   variable: "--font-instrument-serif",
 });
 
-const geistMono = Geist({
+const geistSans = Geist({
   subsets: ["latin"],
   weight: ["300", "400", "500", "700"],
-  variable: "--font-geist-mono",
+  variable: "--font-geist-sans",
 });
 
 export const metadata: Metadata = {
@@ -44,7 +44,7 @@ export default function RootLayout({
   return (
     <html lang="en" suppressHydrationWarning>
       <body
-        className={` ${geistMono.variable} ${instrumentSerif.variable} ${bricol.variable} antialiased dark:bg-[#080808] selection:bg-purple-500 selection:text-white`}
+        className={` ${geistSans.variable} ${instrumentSerif.variable} ${bricol.variable} antialiased dark:bg-[#080808] selection:bg-purple-500 selection:text-white`}
       >
         <ThemeProvider
           attribute="class"
