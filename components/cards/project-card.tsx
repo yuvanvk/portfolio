@@ -60,10 +60,13 @@ export const ProjectCard = ({
             )}/>
             {project.status}
           </div>
-          <div className="flex items-center gap-x-3">
+          <div className="flex items-center gap-x-2.5">
             {project.tech.map((Icon, idx) => (
-              <span key={idx} className="flex items-center justify-center">
-                <Icon className="w-6 h-6" />
+              <span
+                key={idx}
+                className="flex size-4 shrink-0 items-center justify-center [&_svg]:size-4 [&_svg]:shrink-0"
+              >
+                <Icon />
               </span>
             ))}
           </div>

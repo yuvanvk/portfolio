@@ -51,11 +51,11 @@ export async function GET() {
     });
 
 
-  } catch (error) {
+  } catch (e) {
     return NextResponse.json({
       message: "Failed to fetch",
       status: 500,
-      error: error
+      error: e
     });
   }
 }
