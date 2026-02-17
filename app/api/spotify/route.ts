@@ -51,8 +51,7 @@ export async function GET() {
     });
 
 
-  } catch (error: any) {
-    console.log(error.response);
+  } catch (error) {
     return NextResponse.json({
       message: "Failed to fetch",
       status: 500

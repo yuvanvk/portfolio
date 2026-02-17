@@ -1,11 +1,10 @@
 import type { Metadata } from "next";
 import { Bricolage_Grotesque, Instrument_Serif } from "next/font/google";
-import { Geist, Geist_Mono } from "next/font/google";
+import { Geist } from "next/font/google";
 import { ThemeProvider } from "@/components/wrapper/theme-provider";
 import { Analytics } from "@vercel/analytics/next";
 import { Toaster } from "@/components/ui/sonner";
 import "./globals.css";
-import { Navbar } from "@/components/navigation/navbar";
 import { CommandToobar } from "@/components/modals/command-toolbar";
 import { LabelDisplayProvider } from "@/context/LabelDisplay/LabelDisplayProvider";
 import { SoundProvider } from "@/context/Sound/SoundProvider";
@@ -56,7 +55,6 @@ export default function RootLayout({
             <LabelDisplayProvider>
               <Toaster />
               {children}
-              {/* <Navbar /> */}
               <CommandToobar />
               <Analytics />
             </LabelDisplayProvider>

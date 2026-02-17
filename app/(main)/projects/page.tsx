@@ -34,6 +34,7 @@ export default function ProjectsPage() {
         <div className="grid grid-cols-1 md:grid-cols-2 gap-6 pt-28 pb-5">
           {POW.map((p) => (
             <ProjectCard
+              key={p.title}
               project={p}
               playSound={() => playSound("/audio/tap_05.wav")}
             />

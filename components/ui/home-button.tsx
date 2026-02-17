@@ -1,4 +1,3 @@
-import { Home } from "lucide-react";
 import { useRouter } from "next/navigation";
 
 export const HomeButton = () => {

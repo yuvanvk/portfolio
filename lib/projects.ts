@@ -15,7 +15,7 @@ export type POWCardType = {
   description: string;
   deploy: string;
   github: string;
-  tech: ComponentType<any>[];
+  tech: ComponentType[];
   imageUrl: string;
   status?: "Building" | "Running";
 };
