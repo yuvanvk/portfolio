@@ -2,6 +2,8 @@ import Image from "next/image";
 import { POWCardType } from "@/lib/projects";
 import { GitHub } from "../ui/icons";
 import { Globe2Icon } from "lucide-react";
+import { motion } from "motion/react";
+
 import { cn } from "@/lib/utils";
 export const ProjectCard = ({
   project,
@@ -11,9 +13,16 @@ export const ProjectCard = ({
   playSound?: () => void;
 }) => {
   return (
-    <div
+    <motion.div
+      whileHover={{
+        scale: 1.02,
+      }}
+      transition={{
+        duration: 0.3,
+        ease: "backInOut",
+      }}
       onMouseEnter={playSound}
-      className="w-full flex flex-col rounded-[10px] overflow-hidden border min-h-96"
+      className="w-full flex flex-col rounded-[10px] overflow-hidden border min-h-96 cursor-pointer"
     >
       <div className="w-full h-52 relative">
         <Image src={"/images/si.jpeg"} alt="project-image" fill />
@@ -35,18 +44,23 @@ export const ProjectCard = ({
             )}
           </div>
         </div>
-        <div className="text-sm text-neutral-700 dark:text-neutral-300">{project.description}</div>
+        <div className="text-sm text-neutral-700 dark:text-neutral-300">
+          {project.description}
+        </div>
 
         <div className="flex items-center justify-between w-full">
           <div
             className={cn(
-              "text-xs font-sans px-2 py-0.5 rounded-full",
+              "text-xs font-sans px-2 py-0.5 rounded-full flex items-center gap-1",
               `${project.status === "Building" ? "bg-rose-500/20 text-rose-500" : "bg-green-500/30 text-lime-500"}`,
             )}
           >
+            <div className={cn("size-2 rounded-full animate-pulse",
+              `${project.status === "Building" ? "bg-rose-500" : "bg-lime-500"}`
+            )}/>
             {project.status}
           </div>
-          <div className="flex items-center gap-x-3"> {/* Increased gap for emphasis */}
+          <div className="flex items-center gap-x-3">
             {project.tech.map((Icon, idx) => (
               <span key={idx} className="flex items-center justify-center">
                 <Icon className="w-6 h-6" />
@@ -55,6 +69,6 @@ export const ProjectCard = ({
           </div>
         </div>
       </div>
-    </div>
+    </motion.div>
   );
 };

@@ -1,8 +1,20 @@
-import { GithubIcon } from "lucide-react";
 import Image from "next/image";
-import { GitHub, XformerlyTwitter } from "../ui/icons";
+import { GitHub, XformerlyTwitter } from "@/components/ui/icons";
 
 export const Header = () => {
+  
+  const externalLinks = [
+    {
+      id: "github_me",
+      icon: GitHub,
+      href: "https://github.com/yuvanvk",
+    },
+    {
+      id: "X_me",
+      icon: XformerlyTwitter,
+      href: "https://x.com/yuvanvk",
+    },
+  ];
   return (
     <div className="w-full">
       <div className="w-full h-80 relative">
@@ -20,12 +32,19 @@ export const Header = () => {
       <div className="mt-25 px-8 flex items-center justify-between">
         <span className="font-instrument-serif text-4xl ">Abhi Vignesh</span>
         <div className="flex items-center gap-x-3">
-            <div className="size-8 p-2 flex items-center justify-center rounded-full bg-neutral-700 shadow inset-0">
-                <GitHub width={18}/>
-            </div>
-            <div className="size-8 p-2 flex items-center justify-center rounded-full bg-neutral-700 shadow inset-0">
-                <XformerlyTwitter width={15}/>
-            </div>
+          {externalLinks.map((e) => {
+            const Icon = e.icon;
+
+            return (
+              <a
+                href={e.href}
+                key={e.id}
+                className="size-8 p-2 flex items-center justify-center rounded-full bg-neutral-700 shadow inset-0 cursor-pointer"
+              >
+                <Icon width={18} />
+              </a>
+            );
+          })}
         </div>
       </div>
     </div>
