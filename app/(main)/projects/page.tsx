@@ -18,7 +18,7 @@ export default function ProjectsPage() {
         initial={{ opacity: 0, filter: "blur(10px)" }}
         animate={{ opacity: 1, filter: "blur(0px)" }}
         transition={{ duration: 0.3 }}
-        className="pt-20"
+        className="pt-20 pb-16 px-4 md:px-0"
       >
         <HomeButton />
         <div className="flex items-center gap-x-2 max-w-sm md:max-w-lg mx-auto">

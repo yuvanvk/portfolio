@@ -1,12 +1,13 @@
 "use client";
 
+import { cn } from "@/lib/utils";
 import { POW } from "@/lib/projects";
 import { ProjectCard } from "../cards/project-card";
 import { useContext } from "react";
 import { SoundContext } from "@/context/Sound/SoundContext";
-import { cn } from "@/lib/utils";
 import { ArrowUpRight } from "lucide-react";
 import { useRouter } from "next/navigation";
+import { motion } from "motion/react";
 
 export const Projects = () => {
   const { playSound } = useContext(SoundContext);
@@ -15,7 +16,7 @@ export const Projects = () => {
   const projects = POW.filter((x, idx) => idx <= POW.length / 2);
 
   return (
-    <div className="flex flex-col gap-y-3 my-10 w-full">
+    <div className="flex flex-col gap-y-3 my-10 w-full px-4 md:px-0">
       <div className="flex items-center justify-between">
         <span className="font-instrument-serif text-2xl">Projects</span>
       </div>
@@ -28,18 +29,30 @@ export const Projects = () => {
           />
         ))}
       </div>
-      <div onClick={() => router.push("/projects")} className={cn("border w-fit mx-auto p-1 rounded-xl border-neutral-200 dark:border-neutral-800 my-6")}>
-        <button
+      <div
+        onClick={() => router.push("/projects")}
+        className={cn(
+          "border w-fit mx-auto p-1 rounded-xl border-neutral-200 dark:border-neutral-800 my-6",
+        )}
+      >
+        <motion.button
+          whileHover={{
+            scale: 1.02,
+          }}
+          transition={{
+            duration: 0.2,
+            ease: "backInOut",
+          }}
           className={cn(
             "flex items-center gap-x-1 border border-neutral-200 dark:border-neutral-800",
             "px-2 py-1 rounded-[9px]",
             "font-sans font-medium",
-            "cursor-pointer"
+            "cursor-pointer",
           )}
         >
           View All
           <ArrowUpRight size={20} />
-        </button>
+        </motion.button>
       </div>
     </div>
   );

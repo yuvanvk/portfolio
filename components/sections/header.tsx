@@ -39,9 +39,9 @@ export const Header = () => {
               <a
                 href={e.href}
                 key={e.id}
-                className="size-8 p-2 flex items-center justify-center rounded-full bg-neutral-700 shadow inset-0 cursor-pointer"
+                className="size-8 p-2 flex items-center justify-center rounded-full bg-neutral-100  dark:bg-neutral-800 shadow inset-0 cursor-pointer"
               >
-                <Icon width={18} />
+                <Icon width={18} className="text-black dark:text-white"/>
               </a>
             );
           })}

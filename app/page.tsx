@@ -15,13 +15,15 @@ export default function Home() {
         initial={{ opacity: 0, filter: "blur(10px)" }}
         animate={{ opacity: 1, filter: "blur(0px)" }}
         transition={{ duration: 0.3 }}
-        className="px-2 md:px-0 pb-8"
+        className="pb-16"
       >
         <Header />
         <About />
         <Projects />
         <TechStack />
-        <MusicPlayer />
+        <div className="px-3 w-full md:px-0">
+          <MusicPlayer />
+        </div>
       </motion.div>
     </Container>
   );

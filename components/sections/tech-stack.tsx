@@ -17,7 +17,7 @@ import {
   TanStack,
   tRPC,
   TypeScript,
-} from "../ui/icons";
+} from "@/components/ui/icons";
 
 const skills = [
   {
@@ -92,7 +92,7 @@ const skills = [
 
 export const TechStack = () => {
   return (
-    <div className="flex flex-col my-10 space-y-3">
+    <div className="flex flex-col my-10 space-y-3 px-4 md:px-0">
       <span className="font-instrument-serif text-2xl">Tech Stack</span>
       <div className="flex flex-wrap gap-2">
         {skills.map((s, idx) => (

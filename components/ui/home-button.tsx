@@ -7,7 +7,7 @@ export const HomeButton = () => {
   return (
     <button
       onClick={() => router.push("/")}
-      className="bg-neutral-700 rounded-full mb-6 cursor-pointer flex items-center justify-center size-8 shadow inset-0"
+      className="bg-neutral-100 dark:bg-neutral-700 rounded-full mb-6 cursor-pointer flex items-center justify-center size-8 shadow inset-0"
     >
       <svg
         xmlns="http://www.w3.org/2000/svg"
