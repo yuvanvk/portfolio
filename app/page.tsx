@@ -100,7 +100,7 @@ export default function Home() {
         <span className="font-semibold text-neutral-100">Better-Auth</span>,{" "}
         <span className="font-semibold text-blue-400">Typescript</span> and{" "}
         <span className="font-semibold text-orange-400">Cloudflare</span>{" "}
-        providings. Currently learning Solana and Agentic AI jargon.
+        providings. Currently learning Solana and Agentic AI.
       </h2>
 
       <h3>
