@@ -45,7 +45,7 @@ export default function Home() {
         </a>
         ,{" "}
         <a
-          href="https://thoughts.yuvan.me"
+          href="https://github.com/yuvanvk/thoughts"
           target="_blank"
           className="font-bold text-neutral-400 hover:text-neutral-100 transition-colors"
         >
@@ -69,7 +69,7 @@ export default function Home() {
         </a>{" "}
         and{" "}
         <a
-          href="https://unfold.yuvan.me"
+          href="https://unfold-clone.vercel.app/"
           target="_blank"
           className="font-bold text-neutral-400 hover:text-neutral-100 transition-colors"
         >
