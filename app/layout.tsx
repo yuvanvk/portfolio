@@ -36,7 +36,7 @@ export default function RootLayout({
     >
       <Analytics />
       <TooltipProvider>
-        <body>
+        <body className="selection:bg-blue-500 selection:text-white">
         <ThemeProvider
             attribute="class"
             defaultTheme="system"
