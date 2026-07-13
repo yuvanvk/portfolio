@@ -13,12 +13,14 @@ export default function HomePage() {
           code, and now building things that I like.
         </p>
         <p>
-          In a career perspective I'm a Full Stack Developer with good taste in
+          In terms of career perspective I'm a Full Stack Developer with good taste in
           design{" "}
           <span className="text-muted-foreground">
             (not much but yeah decent)
           </span>{" "}
-          and build scalable backend systems.
+          and building scalable backends.{" "}<span className="text-muted-foreground">
+            (learning and building am not a perfectionist tho).
+          </span>{" "}
         </p>
         <br />
         <p>Currently tingering around Agentic Engineering.</p>
@@ -29,7 +31,7 @@ export default function HomePage() {
 
       <section>
         <h2 className="mb-5">Projects</h2>
-        <div className="grid grid-cols-2">
+        <div className="grid grid-cols-2 gap-2">
           {Projects.map((project, idx) => (
             <ProjectCard
               title={project.title}

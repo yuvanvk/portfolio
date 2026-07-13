@@ -14,7 +14,7 @@ export const Projects: Project[] = [
   {
     title: "Kindle",
     description: "Fork it, describe the change, ship the PR.",
-    image: "/project-images/Yuvly (1).png",
+    image: "/project-images/kindle.png",
     href: "",
     github: "https://github.com/yuvanvk/kindle",
     status: "Building"
@@ -33,13 +33,6 @@ export const Projects: Project[] = [
     image: "/project-images/unfold.png",
     href: "",
     github: "",
-    status: "Live"
-  },
-  {
-    title: "Thoughts",
-    description: "Minimal blogging platform built with modern technology",
-    github: "",
-    image: "/project-images/Yuvly (1).png",
     status: "Live"
   },
 ];
