@@ -15,7 +15,7 @@ export default function Projects() {
                 <div className="mb-6">
                     <h2 className="font-medium text-xl">Projects</h2>
                 </div>
-                <div className="grid grid-cols-2 gap-2">
+                <div className="grid grid-cols-1 md:grid-cols-2 gap-2">
                     {projects.map((project, idx) => (
                         <ProjectCard
                             title={project.title}

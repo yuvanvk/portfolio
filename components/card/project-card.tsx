@@ -29,7 +29,7 @@ export const ProjectCard = ({
       initial="rest"
       whileHover="hover"
       animate="rest"
-      className="flex flex-col w-80 h-72 rounded-lg cursor-pointer group"
+      className="flex flex-col md:w-80 h-72 rounded-lg cursor-pointer group"
       onClick={() => router.push(href ? href : github)}
     >
       <div className="border h-45 rounded-lg relative overflow-hidden shadow-sm">

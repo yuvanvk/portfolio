@@ -58,7 +58,7 @@ export default function Home() {
               View all
             </Button>
           </div>
-          <div className="grid grid-cols-2 gap-2">
+          <div className="grid  grid-cols-1 md:grid-cols-2 gap-2">
             {Projects.map((project, idx) => (
               <ProjectCard
                 title={project.title}
