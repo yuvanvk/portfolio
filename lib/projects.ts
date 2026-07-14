@@ -31,8 +31,8 @@ export const Projects: Project[] = [
     title: "Unfold",
     description: "Slick landing page inspired from Unfold website",
     image: "/project-images/unfold.png",
-    href: "",
-    github: "",
+    href: "https://unfold-clone.vercel.app/",
+    github: "https://github.com/yuvanvk/unfold-clone",
     status: "Live"
   },
 ];

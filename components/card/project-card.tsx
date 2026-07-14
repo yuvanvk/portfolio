@@ -3,6 +3,7 @@ import Image from "next/image";
 import { GrainGradient } from "@paper-design/shaders-react";
 import { motion } from "motion/react";
 import { cn } from "@/lib/utils";
+import { useRouter } from "next/navigation";
 
 export interface ProjectCardProps {
   title: string;
@@ -21,12 +22,15 @@ export const ProjectCard = ({
   github,
   status,
 }: ProjectCardProps) => {
+  const router = useRouter();
+
   return (
     <motion.div
       initial="rest"
       whileHover="hover"
       animate="rest"
       className="flex flex-col w-80 h-72 rounded-lg cursor-pointer group"
+      onClick={() => router.push(href ? href : github)}
     >
       <div className="border h-45 rounded-lg relative overflow-hidden shadow-sm">
         <GrainGradient

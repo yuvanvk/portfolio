@@ -29,6 +29,7 @@ import { IoLogoGithub } from "react-icons/io";
 import { IoVolumeMediumOutline } from "react-icons/io5";
 import { BsFillFolderFill, BsFillPersonFill } from "react-icons/bs";
 import { SiGitbook } from "react-icons/si";
+import { useRouter } from "next/navigation";
 
 const THEME_OPTIONS = [
   { value: "system", icon: System, label: "System" },
@@ -37,10 +38,10 @@ const THEME_OPTIONS = [
 ] as const;
 
 const NAV_ITEMS = [
-  { icon: RiHome9Fill, label: "Home" },
-  { icon: BsFillFolderFill, label: "Projects" },
-  { icon: BsFillPersonFill, label: "About" },
-  { icon: SiGitbook, label: "Blogs" },
+  { icon: RiHome9Fill, label: "Home", route: "/" },
+  { icon: BsFillFolderFill, label: "Projects", route: "/projects" },
+  { icon: BsFillPersonFill, label: "About", route: "/about" },
+  { icon: SiGitbook, label: "Blogs" , route: "/blogs" },
 ];
 
 const PRODUCT_ITEMS = [{ icon: Yuvly, label: "Yuvly" }];
@@ -127,6 +128,8 @@ function WorkspaceHeader() {
 }
 
 export const AppSidebar = () => {
+  const router = useRouter();
+
   return (
     <Sidebar variant="inset">
       <SidebarHeader className="p-0">
@@ -139,9 +142,11 @@ export const AppSidebar = () => {
 
         <SidebarGroup>
           <SidebarGroupLabel>Welcome</SidebarGroupLabel>
-          {NAV_ITEMS.map(({ icon: Icon, label }) => (
+          {NAV_ITEMS.map(({ icon: Icon, label, route }) => (
             <SidebarMenuItem key={label}>
-              <SidebarMenuButton className="font-medium">
+              <SidebarMenuButton 
+                onClick={() => router.push(route)}
+              className="font-medium">
                 <Icon />
                 {label}
               </SidebarMenuButton>
