@@ -152,7 +152,7 @@ export const AppSidebar = () => {
       <SidebarContent className="mt-4">
         <SidebarSeparator />
 
-        <SidebarGroup className="space-y-2">
+        <SidebarGroup className="md:space-y-2">
           <SidebarGroupLabel>Welcome</SidebarGroupLabel>
           {NAV_ITEMS.map(({ icon: Icon, label, route }) => (
             <SidebarMenuItem
