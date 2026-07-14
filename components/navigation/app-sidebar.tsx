@@ -156,15 +156,14 @@ export const AppSidebar = () => {
           <SidebarGroupLabel>Welcome</SidebarGroupLabel>
           {NAV_ITEMS.map(({ icon: Icon, label, route }) => (
             <SidebarMenuItem
-              key={label}
-              className={cn(
-                route === pathName &&
-                  "bg-linear-to-b from-neutral-100 to-neutral-200 dark:from-neutral-700 dark:to-neutral-800/90 rounded-lg border-neutral-200 dark:border-neutral-700 border",
-              )}
+              key={label}  
             >
               <SidebarMenuButton
                 onClick={() => router.push(route)}
-                className="font-medium"
+                className={cn(
+                  route === pathName &&
+                    "bg-linear-to-b from-neutral-100 to-neutral-200 dark:from-neutral-700 dark:to-neutral-800/90 rounded-lg border-neutral-200 dark:border-neutral-700 border font-medium",
+                )}
               >
                 <Icon />
                 {label}
