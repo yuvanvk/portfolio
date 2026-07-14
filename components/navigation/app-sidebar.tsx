@@ -53,12 +53,12 @@ function Toolbox() {
   const router = useRouter();
 
   return (
-    <div className="flex items-center gap-1.5 rounded-xl border bg-linear-to-b from-neutral-100 to-neutral-200 dark:from-neutral-950 dark:to-neutral-900 py-2 px-2">
+    <div className="flex items-center justify-between gap-1.5 rounded-xl border bg-linear-to-b from-neutral-100 to-neutral-200 dark:from-neutral-950 dark:to-neutral-900 py-2 px-2">
       {THEME_OPTIONS.map(({ value, icon: Icon, label }) => {
         const isActive = theme === value;
         return (
           <Tooltip key={value}>
-            <TooltipTrigger aschild="true">
+            <TooltipTrigger>
               <div
                 onClick={(e) => {
                   e.stopPropagation();
@@ -89,12 +89,22 @@ function Toolbox() {
 
       <Separator
         orientation="vertical"
-        className="ml-1 bg-neutral-300 dark:bg-neutral-800"
+        className="bg-neutral-300 dark:bg-neutral-800"
       />
-      <Button onClick={() => router.push("https://x.com/yuvanvk")} size="icon-sm" variant="ghost" className="text-neutral-500">
+      <Button
+        onClick={() => router.push("https://x.com/yuvanvk")}
+        size="icon-sm"
+        variant="ghost"
+        className="text-neutral-500"
+      >
         <FaXTwitter />
       </Button>
-      <Button onClick={() => router.push("https://github.com/yuvanvk")} size="icon-sm" variant="ghost" className="text-neutral-500">
+      <Button
+        onClick={() => router.push("https://github.com/yuvanvk")}
+        size="icon-sm"
+        variant="ghost"
+        className="text-neutral-500"
+      >
         <IoLogoGithub />
       </Button>
       <Separator
@@ -104,7 +114,7 @@ function Toolbox() {
       <Button
         size="icon-sm"
         variant="ghost"
-        className="text-neutral-500 mx-auto"
+        className="text-neutral-500"
       >
         <IoVolumeMediumOutline />
       </Button>
@@ -118,7 +128,7 @@ function WorkspaceHeader() {
       <div className="w-10 h-10 bg-blue-500 border border-blue-400 rounded-lg" />
       <div className="flex flex-col">
         <h1 className="tracking-tight text-[14px] font-medium">
-          Yuvan Vignesh
+          Abhi Vignesh
         </h1>
         <h2 className="text-[12px] text-muted-foreground leading-4">
           Workspace

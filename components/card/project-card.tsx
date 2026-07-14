@@ -29,13 +29,12 @@ export const ProjectCard = ({
       initial="rest"
       whileHover="hover"
       animate="rest"
-      className="flex flex-col md:w-80 h-72 rounded-lg cursor-pointer group"
+      className="flex flex-col w-full rounded-lg cursor-pointer group"
       onClick={() => router.push(href ? href : github)}
     >
-      <div className="border h-45 rounded-lg relative overflow-hidden shadow-sm">
+      <div className="border rounded-lg relative overflow-hidden shadow-sm aspect-[16/9]">
         <GrainGradient
-          width={320}
-          className="h-full"
+          style={{ height: "100%", width: "100%" }}
           colors={["#006eff", "#174e96", "#00bfff", "#2b00ff"]}
           colorBack="#000000"
           softness={0.5}
@@ -50,14 +49,14 @@ export const ProjectCard = ({
             hover: { y: 10 },
           }}
           transition={{ type: "spring", stiffness: 300, damping: 20 }}
-          className="absolute z-10 left-1/2 -translate-x-1/2 -bottom-13 w-72 h-53 rounded-sm overflow-hidden border-2 border-neutral-950 shadow-lg"
+          className="absolute z-10 left-1/2 -translate-x-1/2 bottom-[-5%] w-[90%] aspect-[16/9] rounded-sm overflow-hidden border-2 border-neutral-950 shadow-lg"
         >
           <Image
             src={image}
             alt={title}
             fill
-            sizes="288px"
-            className="object-contain object-top"
+            sizes="(max-width: 768px) 90vw, 288px"
+            className="object-cover object-top"
           />
         </motion.div>
       </div>
