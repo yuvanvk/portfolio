@@ -30,6 +30,7 @@ import { IoVolumeMediumOutline } from "react-icons/io5";
 import { BsFillFolderFill, BsFillPersonFill } from "react-icons/bs";
 import { SiGitbook } from "react-icons/si";
 import { usePathname, useRouter } from "next/navigation";
+import Image from "next/image";
 
 const THEME_OPTIONS = [
   { value: "system", icon: System, label: "System" },
@@ -125,7 +126,9 @@ function Toolbox() {
 function WorkspaceHeader() {
   return (
     <div className="flex items-center gap-1.5 rounded-xl border bg-linear-to-b from-neutral-100 to-neutral-200 dark:from-neutral-950 dark:to-neutral-900 py-2 px-2">
-      <div className="w-10 h-10 bg-blue-500 border border-blue-400 rounded-lg" />
+      <div className="w-10 h-10 rounded-lg relative overflow-hidden shadow-sm border border-blue-300">
+        <Image src={"/glfl.jpeg"} alt="logo" fill sizes="40px"/>
+      </div>
       <div className="flex flex-col">
         <h1 className="tracking-tight text-[14px] font-medium">
           Abhi Vignesh
