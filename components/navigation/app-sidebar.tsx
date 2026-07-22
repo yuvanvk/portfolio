@@ -3,6 +3,7 @@
 import {
   Sidebar,
   SidebarContent,
+  SidebarFooter,
   SidebarGroup,
   SidebarGroupLabel,
   SidebarHeader,
@@ -22,7 +23,7 @@ import { useTheme } from "next-themes";
 import { motion } from "motion/react";
 import { cn } from "@/lib/utils";
 
-import { MoonStar, Sun } from "lucide-react";
+import { CalendarDays, MoonStar, Sun } from "lucide-react";
 import { RiHome9Fill } from "react-icons/ri";
 import { FaXTwitter } from "react-icons/fa6";
 import { IoLogoGithub } from "react-icons/io";
@@ -112,11 +113,7 @@ function Toolbox() {
         orientation="vertical"
         className="bg-neutral-300 dark:bg-neutral-800"
       />
-      <Button
-        size="icon-sm"
-        variant="ghost"
-        className="text-neutral-500"
-      >
+      <Button size="icon-sm" variant="ghost" className="text-neutral-500">
         <IoVolumeMediumOutline />
       </Button>
     </div>
@@ -127,12 +124,10 @@ function WorkspaceHeader() {
   return (
     <div className="flex items-center gap-1.5 rounded-xl border bg-linear-to-b from-neutral-100 to-neutral-200 dark:from-neutral-950 dark:to-neutral-900 py-2 px-2">
       <div className="w-10 h-10 rounded-lg relative overflow-hidden shadow-sm border border-blue-300">
-        <Image src={"/glfl.jpeg"} alt="logo" fill sizes="40px"/>
+        <Image src={"/glfl.jpeg"} alt="logo" fill sizes="40px" />
       </div>
       <div className="flex flex-col">
-        <h1 className="tracking-tight text-[14px] font-medium">
-          Abhi Vignesh
-        </h1>
+        <h1 className="tracking-tight text-[14px] font-medium">Abhi Vignesh</h1>
         <h2 className="text-[12px] text-muted-foreground leading-4">
           Workspace
         </h2>
@@ -158,9 +153,7 @@ export const AppSidebar = () => {
         <SidebarGroup className="md:space-y-2">
           <SidebarGroupLabel>Welcome</SidebarGroupLabel>
           {NAV_ITEMS.map(({ icon: Icon, label, route }) => (
-            <SidebarMenuItem
-              key={label}  
-            >
+            <SidebarMenuItem key={label}>
               <SidebarMenuButton
                 onClick={() => router.push(route)}
                 className={cn(
@@ -187,6 +180,17 @@ export const AppSidebar = () => {
           ))}
         </SidebarGroup>
       </SidebarContent>
+      <SidebarFooter>
+        <Button
+          size={"sm"}
+          className={cn(
+            "bg-linear-to-b to-blue-700 from-blue-400 border-blue-500! cursor-pointer text-neutral-100 hover:text-neutral-100 hover:opacity-90",
+          )}
+        >
+          <CalendarDays />
+          Have a meet
+        </Button>
+      </SidebarFooter>
     </Sidebar>
   );
 };
