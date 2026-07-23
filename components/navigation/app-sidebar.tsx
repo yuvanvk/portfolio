@@ -181,15 +181,21 @@ export const AppSidebar = () => {
         </SidebarGroup>
       </SidebarContent>
       <SidebarFooter>
-        <Button
-          size={"sm"}
-          className={cn(
-            "bg-linear-to-b to-blue-700 from-blue-400 border-blue-500! cursor-pointer text-neutral-100 hover:text-neutral-100 hover:opacity-90",
-          )}
+        <a
+          href="https://cal.com/abhivignesh/15min"
+          target="_blank"
+          className="w-full"
         >
-          <CalendarDays />
-          Have a meet
-        </Button>
+          <Button
+            size={"sm"}
+            className={cn(
+              "w-full bg-linear-to-b to-blue-600 from-blue-400 border-blue-500! cursor-pointer text-neutral-100 hover:text-neutral-100 hover:opacity-90",
+            )}
+          >
+            <CalendarDays />
+            Book a call
+          </Button>
+        </a>
       </SidebarFooter>
     </Sidebar>
   );
