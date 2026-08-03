@@ -28,6 +28,7 @@ import { RiHome9Fill } from "react-icons/ri";
 import { FaXTwitter } from "react-icons/fa6";
 import { IoLogoGithub } from "react-icons/io";
 import { IoVolumeMediumOutline } from "react-icons/io5";
+import { FaCodeMerge } from "react-icons/fa6";
 import { BsFillFolderFill, BsFillPersonFill } from "react-icons/bs";
 import { SiGitbook } from "react-icons/si";
 import { usePathname, useRouter } from "next/navigation";
@@ -44,6 +45,7 @@ const NAV_ITEMS = [
   { icon: BsFillFolderFill, label: "Projects", route: "/projects" },
   { icon: BsFillPersonFill, label: "About", route: "/about" },
   { icon: SiGitbook, label: "Blogs", route: "/blogs" },
+  { icon: FaCodeMerge, label: "OSS Contributions", route: "/oss" },
 ];
 
 const PRODUCT_ITEMS = [{ icon: Yuvly, label: "Yuvly" }];

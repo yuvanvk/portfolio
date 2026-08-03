@@ -3,10 +3,12 @@
 import { GithubGraph } from "@/components/card/github-graph";
 import { ProjectCard } from "@/components/card/project-card";
 import { Button } from "@/components/ui/button";
+import { OSS } from "@/lib/oss";
 import { Projects } from "@/lib/projects";
 import { cn } from "@/lib/utils";
 import { motion, AnimatePresence } from "motion/react";
 import { useRouter } from "next/navigation";
+import { OSSCard } from "../card/oss-card";
 
 export default function Home() {
   const router = useRouter();
@@ -70,6 +72,26 @@ export default function Home() {
                 key={idx}
               />
             ))}
+          </div>
+        </section>
+
+        <section>
+          <div className="flex items-center justify-between mb-6">
+            <h2 className="font-medium text-xl mb-6">OSS Contributions</h2>
+            <Button
+              size={"xs"}
+              variant={"outline"}
+              onClick={() => router.push("/oss")}
+              className={cn(
+                "bg-linear-to-b to-blue-700 from-blue-400 border-blue-500! cursor-pointer text-neutral-100 hover:text-neutral-100 hover:opacity-90",
+              )}
+            >
+              View all
+            </Button>
+          </div>
+
+          <div className="flex flex-col gap-3">
+              {OSS.slice(0,2).map((oss) => <OSSCard PR={oss.PR} href={oss.href}/>)}
           </div>
         </section>
 
