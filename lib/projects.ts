@@ -23,7 +23,7 @@ export const Projects: Project[] = [
     title: "Yuvly",
     description: "Your travel buddy.",
     image: "/project-images/Yuvly (1).png",
-    href: "",
+    href: "https://www.yuvly.tech/",
     github: "https://github.com/slavanlabs/yuvly",
     status: "Building"
   },
