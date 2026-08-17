@@ -18,12 +18,12 @@ import {
 } from "@/components/ui/tooltip";
 import { Separator } from "@/components/ui/separator";
 import { Button } from "@/components/ui/button";
-import { System, Yuvly } from "@/components/icons";
+import { Yuvly } from "@/components/icons";
 import { useTheme } from "next-themes";
 import { motion } from "motion/react";
 import { cn } from "@/lib/utils";
 
-import { CalendarDays, MoonStar, Sun } from "lucide-react";
+import { CalendarDays, Monitor, MoonStar, Sun } from "lucide-react";
 import { RiHome9Fill } from "react-icons/ri";
 import { FaXTwitter } from "react-icons/fa6";
 import { IoLogoGithub } from "react-icons/io";
@@ -35,7 +35,7 @@ import { usePathname, useRouter } from "next/navigation";
 import Image from "next/image";
 
 const THEME_OPTIONS = [
-  { value: "system", icon: System, label: "System" },
+  { value: "system", icon: Monitor, label: "System" },
   { value: "light", icon: Sun, label: "Light" },
   { value: "dark", icon: MoonStar, label: "Dark" },
 ] as const;
