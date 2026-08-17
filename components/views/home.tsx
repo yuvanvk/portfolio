@@ -51,11 +51,7 @@ export default function Home() {
             <h2 className="font-medium text-xl">Projects</h2>
             <Button
               size={"xs"}
-              variant={"outline"}
               onClick={() => router.push("/projects")}
-              className={cn(
-                "bg-linear-to-b to-blue-700 from-blue-400 border-blue-500! cursor-pointer text-neutral-100 hover:text-neutral-100 hover:opacity-90",
-              )}
             >
               View all
             </Button>
@@ -80,18 +76,14 @@ export default function Home() {
             <h2 className="font-medium text-xl mb-6">OSS Contributions</h2>
             <Button
               size={"xs"}
-              variant={"outline"}
               onClick={() => router.push("/oss")}
-              className={cn(
-                "bg-linear-to-b to-blue-700 from-blue-400 border-blue-500! cursor-pointer text-neutral-100 hover:text-neutral-100 hover:opacity-90",
-              )}
             >
               View all
             </Button>
           </div>
 
           <div className="flex flex-col gap-3">
-              {OSS.slice(0,2).map((oss) => <OSSCard PR={oss.PR} href={oss.href}/>)}
+              {OSS.slice(0,2).map((oss) => <OSSCard key={oss.PR} PR={oss.PR} href={oss.href}/>)}
           </div>
         </section>
 

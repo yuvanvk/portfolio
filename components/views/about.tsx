@@ -12,9 +12,9 @@ export const About = () => {
       >
         <span className="text-muted-foreground">Want to know about me </span>-
         I'm Abhi from{" "}
-        <span className="font-medium text-blue-400">Telangana, India</span>. I
+        <span className="font-medium underline decoration-1">Telangana, India</span>. I
         started to learn code from my mid sophomore year. Currently building my
-        first product <span className="font-medium text-blue-400">Yuvly</span>.{" "}
+        first product <span className="font-medium underline decoration-1">Yuvly</span>.{" "}
         <span className="text-muted-foreground">
           (that's it for now, maybe after completing building Yuvly i would
           update this page.)

@@ -13,9 +13,9 @@ export default function MainLayout({
   children: React.ReactNode;
 }) {
   return (
-    <SidebarProvider>
+    <SidebarProvider className="dark:bg-neutral-950!">
       <AppSidebar />
-      <SidebarInset className="bg-neutral-100 dark:bg-[#121212] border">
+      <SidebarInset className="border">
         <div className="absolute top-2 left-2 z-10">
           <SidebarTrigger />
         </div>

@@ -143,16 +143,16 @@ export const AppSidebar = () => {
   const pathName = usePathname();
 
   return (
-    <Sidebar variant="inset">
-      <SidebarHeader className="p-0">
+    <Sidebar variant="inset" className="dark:bg-neutral-950">
+      <SidebarHeader className="p-0 dark:bg-neutral-950">
         <WorkspaceHeader />
         <Toolbox />
       </SidebarHeader>
 
-      <SidebarContent className="mt-4">
-        <SidebarSeparator />
+      <SidebarContent className=" dark:bg-neutral-950">
+        <SidebarSeparator  className="mt-4"/>
 
-        <SidebarGroup className="md:space-y-2">
+        <SidebarGroup className="space-y-1 ">
           <SidebarGroupLabel>Welcome</SidebarGroupLabel>
           {NAV_ITEMS.map(({ icon: Icon, label, route }) => (
             <SidebarMenuItem key={label}>
@@ -182,18 +182,15 @@ export const AppSidebar = () => {
           ))}
         </SidebarGroup>
       </SidebarContent>
-      <SidebarFooter>
+      <SidebarFooter
+        className="dark:bg-neutral-950"
+      >
         <a
           href="https://cal.com/abhivignesh/15min"
           target="_blank"
           className="w-full"
         >
-          <Button
-            size={"sm"}
-            className={cn(
-              "w-full bg-linear-to-b to-blue-600 from-blue-400 border-blue-500! cursor-pointer text-neutral-100 hover:text-neutral-100 hover:opacity-90",
-            )}
-          >
+          <Button size={"sm"} className={cn("w-full ")}>
             <CalendarDays />
             Book a call
           </Button>

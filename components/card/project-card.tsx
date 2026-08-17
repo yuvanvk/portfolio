@@ -35,7 +35,7 @@ export const ProjectCard = ({
       <div className="border rounded-lg relative overflow-hidden shadow-sm aspect-[16/9]">
         <GrainGradient
           style={{ height: "100%", width: "100%" }}
-          colors={["#006eff", "#174e96", "#00bfff", "#2b00ff"]}
+          colors={["#404040", "#262626", "#171717", "#525252"]}
           colorBack="#000000"
           softness={0.5}
           intensity={0.5}

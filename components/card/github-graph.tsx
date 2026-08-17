@@ -1,4 +1,3 @@
-
 "use client";
 
 import { cn } from "@/lib/utils";
@@ -22,6 +21,14 @@ type Contribution = {
 type ContributionsResponse = {
   total: Record<number | string, number>;
   contributions: Contribution[];
+};
+
+const LEVEL_CLASSNAMES: Record<0 | 1 | 2 | 3 | 4, string> = {
+  0: "bg-[#eaeaea] dark:bg-[#1a1a1a]",
+  1: "bg-[#c4c4c4] dark:bg-[#333333]",
+  2: "bg-[#8f8f8f] dark:bg-[#666666]",
+  3: "bg-[#525252] dark:bg-[#a8a8a8]",
+  4: "bg-black dark:bg-white",
 };
 
 export const GithubGraph = () => {
@@ -75,11 +82,11 @@ export const GithubGraph = () => {
           <ContributionGraphBlock
             activity={activity}
             className={cn(
-              'data-[level="0"]:fill-[#ebedf0] dark:data-[level="0"]:fill-[#0e1a29]',
-              'data-[level="1"]:fill-[#b3d4fc] dark:data-[level="1"]:fill-[#1a4f8f]',
-              'data-[level="2"]:fill-[#6ba3f5] dark:data-[level="2"]:fill-[#2e6fc7]',
-              'data-[level="3"]:fill-[#3b7ded] dark:data-[level="3"]:fill-[#4c8ef0]',
-              'data-[level="4"]:fill-[#1e5bc6] dark:data-[level="4"]:fill-[#7ab3ff]',
+              'data-[level="0"]:fill-[#eaeaea] dark:data-[level="0"]:fill-[#1a1a1a]',
+              'data-[level="1"]:fill-[#c4c4c4] dark:data-[level="1"]:fill-[#333333]',
+              'data-[level="2"]:fill-[#8f8f8f] dark:data-[level="2"]:fill-[#666666]',
+              'data-[level="3"]:fill-[#525252] dark:data-[level="3"]:fill-[#a8a8a8]',
+              'data-[level="4"]:fill-black dark:data-[level="4"]:fill-white',
             )}
             dayIndex={dayIndex}
             weekIndex={weekIndex}
@@ -104,7 +111,10 @@ export const GithubGraph = () => {
               data-level={level}
             >
               <div
-                className={`h-full w-full rounded-sm border border-border ${level === 0 ? "bg-[#ebedf0] dark:bg-[#0a2f5c]" : ""} ${level === 1 ? "bg-[#b3d4fc] dark:bg-[#1a4f8f]" : ""} ${level === 2 ? "bg-[#6ba3f5] dark:bg-[#2e6fc7]" : ""} ${level === 3 ? "bg-[#3b7ded] dark:bg-[#4c8ef0]" : ""} ${level === 4 ? "bg-[#1e5bc6] dark:bg-[#7ab3ff]" : ""} `}
+                className={cn(
+                  "h-full w-full rounded-sm border border-border",
+                  LEVEL_CLASSNAMES[level as 0 | 1 | 2 | 3 | 4],
+                )}
               />
               <span className="-top-8 absolute hidden rounded bg-popover px-2 py-1 text-popover-foreground text-xs shadow-md group-hover:block">
                 Level {level}
