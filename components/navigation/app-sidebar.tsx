@@ -144,7 +144,7 @@ export const AppSidebar = () => {
 
   return (
     <Sidebar variant="inset" className="dark:bg-neutral-950">
-      <SidebarHeader className="p-0 dark:bg-neutral-950">
+      <SidebarHeader className="p-1 dark:bg-neutral-950">
         <WorkspaceHeader />
         <Toolbox />
       </SidebarHeader>
