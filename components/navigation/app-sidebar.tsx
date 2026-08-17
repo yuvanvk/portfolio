@@ -27,11 +27,12 @@ import { CalendarDays, Monitor, MoonStar, Sun } from "lucide-react";
 import { RiHome9Fill } from "react-icons/ri";
 import { FaXTwitter } from "react-icons/fa6";
 import { IoLogoGithub } from "react-icons/io";
-import { IoVolumeMediumOutline } from "react-icons/io5";
+import { IoVolumeMediumOutline, IoVolumeMuteOutline } from "react-icons/io5";
 import { FaCodeMerge } from "react-icons/fa6";
 import { BsFillFolderFill, BsFillPersonFill } from "react-icons/bs";
 import { SiGitbook } from "react-icons/si";
 import { usePathname, useRouter } from "next/navigation";
+import { useSound } from "@/components/sound-provider";
 import Image from "next/image";
 
 const THEME_OPTIONS = [
@@ -55,6 +56,10 @@ const ICON_SIZE = 15;
 function Toolbox() {
   const { theme, setTheme } = useTheme();
   const router = useRouter();
+  const { isMuted, toggleMute, play } = useSound();
+
+  const playTap = () => play("/audio/tap_05.wav");
+  const playMuteTap = () => play("/audio/tap_03.wav");
 
   return (
     <div className="flex items-center justify-between gap-1.5 rounded-xl border bg-linear-to-b from-neutral-100 to-neutral-200 dark:from-neutral-950 dark:to-neutral-900 py-2 px-2">
@@ -67,6 +72,7 @@ function Toolbox() {
                 onClick={(e) => {
                   e.stopPropagation();
                   setTheme(value);
+                  playTap();
                 }}
                 className="relative z-10 cursor-pointer rounded-full p-1"
               >
@@ -96,7 +102,7 @@ function Toolbox() {
         className="bg-neutral-300 dark:bg-neutral-800"
       />
       <Button
-        onClick={() => router.push("https://x.com/yuvanvk")}
+        onClick={() => { router.push("https://x.com/yuvanvk"); playTap(); }}
         size="icon-sm"
         variant="ghost"
         className="text-neutral-500"
@@ -104,7 +110,7 @@ function Toolbox() {
         <FaXTwitter />
       </Button>
       <Button
-        onClick={() => router.push("https://github.com/yuvanvk")}
+        onClick={() => { router.push("https://github.com/yuvanvk"); playTap(); }}
         size="icon-sm"
         variant="ghost"
         className="text-neutral-500"
@@ -115,8 +121,13 @@ function Toolbox() {
         orientation="vertical"
         className="bg-neutral-300 dark:bg-neutral-800"
       />
-      <Button size="icon-sm" variant="ghost" className="text-neutral-500">
-        <IoVolumeMediumOutline />
+      <Button
+        onClick={() => { toggleMute(); playMuteTap(); }}
+        size="icon-sm"
+        variant="ghost"
+        className="text-neutral-500"
+      >
+        {isMuted ? <IoVolumeMuteOutline /> : <IoVolumeMediumOutline />}
       </Button>
     </div>
   );
