@@ -16,10 +16,10 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "Yuvan",
-  description: "Portfolio Website of Yuvan - AI Engineer",
+  title: "Yuvan Vignesh",
+  description: "Portfolio Website of Yuvan - Applied AI Engineer",
   icons: {
-    icon: "/icon.svg"
+    icon: "/tab-icon.svg"
   }
 };
 
