@@ -18,7 +18,6 @@ import {
 } from "@/components/ui/tooltip";
 import { Separator } from "@/components/ui/separator";
 import { Button } from "@/components/ui/button";
-import { Yuvly } from "@/components/icons";
 import { useTheme } from "next-themes";
 import { motion } from "motion/react";
 import { cn } from "@/lib/utils";
@@ -34,6 +33,7 @@ import { SiGitbook } from "react-icons/si";
 import { usePathname, useRouter } from "next/navigation";
 import { useSound } from "@/components/sound-provider";
 import Image from "next/image";
+import { TbNavigationFilled } from "react-icons/tb";
 
 const THEME_OPTIONS = [
   { value: "system", icon: Monitor, label: "System" },
@@ -49,7 +49,7 @@ const NAV_ITEMS = [
   { icon: FaCodeMerge, label: "OSS Contributions", route: "/oss" },
 ];
 
-const PRODUCT_ITEMS = [{ icon: Yuvly, label: "Yuvly" }];
+const PRODUCT_ITEMS = [{ icon: TbNavigationFilled, label: "Roam" }];
 
 const ICON_SIZE = 15;
 

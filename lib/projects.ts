@@ -12,19 +12,19 @@ export const Projects: Project[] = [
     status: "Live"
   },
   {
-    title: "Kindle",
-    description: "Fork it, describe the change, ship the PR.",
-    image: "/project-images/kindle.png",
+    title: "Terminal Agent",
+    description: "A coding agent inside your terminal",
+    image: "/project-images/ta.png",
     href: "",
-    github: "https://github.com/yuvanvk/kindle",
+    github: "https://github.com/yuvanvk/terminal-agent",
     status: "Building"
   },
   {
-    title: "Yuvly",
-    description: "Your travel buddy.",
-    image: "/project-images/Yuvly (1).png",
-    href: "https://www.yuvly.tech/",
-    github: "https://github.com/slavanlabs/yuvly",
+    title: "Roam",
+    description: "AI travel executive for your company.",
+    image: "/project-images/Roam (1).png",
+    href: "https://heyroam.xyz",
+    github: "",
     status: "Building"
   },
   {
