@@ -17,7 +17,7 @@ export const Projects: Project[] = [
     image: "/project-images/ta.png",
     href: "",
     github: "https://github.com/yuvanvk/terminal-agent",
-    status: "Building"
+    status: "Live"
   },
   {
     title: "Roam",
